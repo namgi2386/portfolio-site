@@ -22,6 +22,14 @@ export default function FeedbackForm() {
     setFeedback(newF);
     localStorage.setItem('feedback', JSON.stringify(newF));
   };
+  const updateExtra = (type: keyof FeedbackData, value: string) => {
+    const newF = {
+      ...feedback,
+      [type]: value,
+    };
+    setFeedback(newF);
+    localStorage.setItem('feedback', JSON.stringify(newF));
+  };
 
   return (
     <>
@@ -51,6 +59,44 @@ export default function FeedbackForm() {
               </button>
             ))}
           </div>
+          <div>
+            <div className="text-background">코멘트 내용</div>
+            <textarea
+              value={feedback.comment_text}
+              onChange={(e) => updateExtra('comment_text', e.target.value)}
+              placeholder="코멘트 내용"
+              className=" p-2 border text-background border-1 border-background resize-none min-h-20"
+            />
+          </div>
+          <div>
+            <div className="text-background">버그 내용</div>
+            <textarea
+              value={feedback.bug_description}
+              onChange={(e) => updateExtra('bug_description', e.target.value)}
+              placeholder="버그 내용"
+              className=" p-2 border text-background border-1 border-background resize-none min-h-20"
+            />
+          </div>
+          <div className="mb-8">
+            <label className="text-background block mb-2">채용 정보 공유 (선택)</label>
+            <input
+              type="text"
+              value={feedback.compony_name}
+              onChange={(e) => updateExtra('compony_name', e.target.value)}
+              placeholder="회사명"
+              className="p-2 border text-background border-1 border-background"
+            />
+            <input
+              type="url"
+              value={feedback.job_link}
+              onChange={(e) => updateExtra('job_link', e.target.value)}
+              placeholder="채용공고 링크"
+              className="p-2 border text-background border-1 border-background"
+            />
+          </div>
+          <button className="w-full bg-rose-500 text-white p-3 rounded font-medium hover:bg-rose-600 transition-colors duration-300 cursor-pointer" onClick={() => console.log('제출:', feedback)}>
+            피드백 제출
+          </button>
         </div>
       </div>
     </>
