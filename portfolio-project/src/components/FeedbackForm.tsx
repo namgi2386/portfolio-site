@@ -31,6 +31,10 @@ export default function FeedbackForm() {
     localStorage.setItem('feedback', JSON.stringify(newF));
   };
 
+  const submitForm = () => {
+    
+  }
+
   return (
     <>
       <div className="bg-foreground">
@@ -94,7 +98,7 @@ export default function FeedbackForm() {
               className="p-2 border text-background border-1 border-background"
             />
           </div>
-          <button className="w-full bg-rose-500 text-white p-3 rounded font-medium hover:bg-rose-600 transition-colors duration-300 cursor-pointer" onClick={() => console.log('제출:', feedback)}>
+          <button className="w-full bg-rose-500 text-white p-3 rounded font-medium hover:bg-rose-600 transition-colors duration-300 cursor-pointer" onClick={submitForm}>
             피드백 제출
           </button>
         </div>
