@@ -1,5 +1,6 @@
 'use client';
 
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 interface Message {
@@ -17,11 +18,10 @@ export default function TestPage() {
   // 메시지 목록 불러오기
   const fetchMessages = async () => {
     try {
-      const response = await fetch('/api/test-messages');
-      const data = await response.json();
+      const response = await axios.get('/api/test-messages');
 
-      if (data.status === 'success') {
-        setMessages(data.data);
+      if (response.data.status === 'success') {
+        setMessages(response.data.data);
       } else {
         setError('Failed to fetch messages');
       }
@@ -49,15 +49,11 @@ export default function TestPage() {
     setError('');
 
     try {
-      const response = await fetch('/api/test-messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ content }),
+      const response = await axios.post('/api/test-messages', {
+        content,
       });
 
-      const data = await response.json();
+      const data = await response.data;
 
       if (data.status === 'success') {
         setContent('');
@@ -75,6 +71,29 @@ export default function TestPage() {
 
   return (
     <div className="max-w-2xl mx-auto p-8">
+      <div>
+        {/* // 기본 폰트 (Pretendard) - 자동 적용 */}
+        <p>기본 텍스트</p>
+        {/* // font-sans로 기본 폰트 명시적 적용 */}
+        <p className="font-sans">Pretendard 기본 폰트</p>
+        {/* // Paperlogy 폰트 사용 */}
+        <h1 className="font-paperlogy text-4xl font-bold">paperlogy폰트적용</h1>
+        <p className="font-paperlogy">paperlogy폰트적용</p>
+        <p className="font-paperlogy font-bold">paperlogy폰트적용</p>
+        {/* // Gmarket Sans 폰트 사용 */}
+        <div className="font-gmarket">
+          <span className="font-light">Light 텍스트</span>
+          <span className="font-medium">Medium 텍스트</span>
+          <span className="font-bold">Bold 텍스트</span>
+        </div>
+        {/* 색상 적용 테스트 */}
+        <div className="font-gmarket">
+          <span className="font-light text-green-01">Light 텍스트</span>
+          <span className="font-medium text-rose-01">Medium 텍스트</span>
+          <span className="font-bold text-green-02">Bold 텍스트</span>
+          <span className="font-bold bg-green-02">Bold 텍스트</span>
+        </div>
+      </div>
       <h1 className="text-3xl font-bold mb-8">Supabase Connection Test</h1>
 
       {/* 에러 메시지 */}
