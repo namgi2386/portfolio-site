@@ -93,6 +93,13 @@ export default function TestPage() {
           <span className="font-bold text-green-02">Bold 텍스트</span>
           <span className="font-bold bg-green-02">Bold 텍스트</span>
         </div>
+        <div>
+          <span className="font-bold text-no0">Bold 텍스트</span>
+          <span className="font-bold text-no1 bg-no2">Bold 텍스트</span>
+          <span className="font-bold text-no2">Bold 텍스트</span>
+          <span className="font-bold text-no3">Bold 텍스트</span>
+          <span className="font-bold text-no4">Bold 텍스트</span>
+        </div>
       </div>
       <h1 className="text-3xl font-bold mb-8">Supabase Connection Test</h1>
 
