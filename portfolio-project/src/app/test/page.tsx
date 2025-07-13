@@ -1,5 +1,6 @@
 'use client';
 
+import ThemeToggle from '@/shared/ui/ThemeToggle';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -72,6 +73,12 @@ export default function TestPage() {
   return (
     <div className="max-w-2xl mx-auto p-8">
       <div>
+        <div>
+          <ThemeToggle />
+        </div>
+        <div className="bg-foreground w-10 h-10 flex justify-center">
+          <div className="bg-background w-6 h-6"></div>
+        </div>
         {/* // 기본 폰트 (Pretendard) - 자동 적용 */}
         <p>기본 텍스트</p>
         {/* // font-sans로 기본 폰트 명시적 적용 */}

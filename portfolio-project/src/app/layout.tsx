@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
 
@@ -11,10 +12,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, modal }: { children: React.ReactNode; modal: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body>
-        {children}
-        {modal}
+        <ThemeProvider attribute="class">
+          {children}
+          {modal}
+        </ThemeProvider>
       </body>
     </html>
   );
