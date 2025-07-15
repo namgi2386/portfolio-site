@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
+import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
   title: 'portfolio-project',
@@ -15,6 +16,7 @@ export default function RootLayout({ children, modal }: { children: React.ReactN
     <html lang="ko" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Sidebar />
           {children}
           {modal}
         </ThemeProvider>
