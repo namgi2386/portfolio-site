@@ -1,5 +1,7 @@
+import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
+import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
   title: 'portfolio-project',
@@ -11,10 +13,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, modal }: { children: React.ReactNode; modal: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body>
-        {children}
-        {modal}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Sidebar/>
+          {children}
+          {modal}
+        </ThemeProvider>
       </body>
     </html>
   );

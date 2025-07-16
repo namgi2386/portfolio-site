@@ -1,14 +1,25 @@
 'use client';
 
 import { RatingType, initialFeedback, FeedbackData } from '@/entities/feedback/model/types';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 export default function FeedbackForm() {
   const [feedback, setFeedback] = useState<FeedbackData>(initialFeedback);
+  const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState<boolean>(false);
 
   useEffect(() => {
     const savedData = localStorage.getItem('feedback');
+    const feedbackSubmittedData = localStorage.getItem('feedbackSubmitted');
     if (savedData) setFeedback(JSON.parse(savedData));
+
+    if (feedbackSubmittedData) {
+      const status = JSON.parse(feedbackSubmittedData);
+      if (status.submitted && Date.now() - status.timestamp > 3600000) {
+        status.submitted = false;
+      }
+      setIsFeedbackSubmitted(status.submitted);
+    }
   }, []);
 
   const updateScore = (type: RatingType, num: number) => {
@@ -29,6 +40,18 @@ export default function FeedbackForm() {
     };
     setFeedback(newF);
     localStorage.setItem('feedback', JSON.stringify(newF));
+  };
+
+  const submitForm = () => {
+    axios.post('/api/feedback', feedback);
+    localStorage.setItem(
+      'feedbackSubmitted',
+      JSON.stringify({
+        submitted: true,
+        timestamp: Date.now(),
+      }),
+    );
+    setIsFeedbackSubmitted(true);
   };
 
   return (
@@ -94,8 +117,14 @@ export default function FeedbackForm() {
               className="p-2 border text-background border-1 border-background"
             />
           </div>
-          <button className="w-full bg-rose-500 text-white p-3 rounded font-medium hover:bg-rose-600 transition-colors duration-300 cursor-pointer" onClick={() => console.log('제출:', feedback)}>
-            피드백 제출
+          <button
+            className={`w-full  text-white p-3 rounded font-medium  transition-colors duration-300 cursor-pointer ${
+              isFeedbackSubmitted ? 'bg-gray-500 hover:bg-gray-600' : 'bg-rose-500 hover:bg-rose-600'
+            }`}
+            onClick={submitForm}
+            disabled={isFeedbackSubmitted}
+          >
+            {isFeedbackSubmitted ? '피드백 제출 완료' : '피드백 제출'}
           </button>
         </div>
       </div>
