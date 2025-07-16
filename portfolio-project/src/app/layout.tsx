@@ -16,7 +16,7 @@ export default function RootLayout({ children, modal }: { children: React.ReactN
     <html lang="ko" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Sidebar />
+          <Sidebar/>
           {children}
           {modal}
         </ThemeProvider>
