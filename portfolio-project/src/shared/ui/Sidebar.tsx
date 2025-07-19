@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Sidebar() {
   return (
     <>
-      <div className="fixed top-1/2 right-0 mr-2 gap-4 h-60 bg-no2 w-20 flex flex-col justify-start p-2">
+      <div className="fixed top-1/2 right-0 mr-2 gap-4 h-60 bg-no2 w-20 flex flex-col justify-start p-2 z-50">
         <div className="flex justify-center bg-background rounded-md">
           <ThemeToggle />
         </div>
