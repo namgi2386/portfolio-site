@@ -2,7 +2,7 @@
 
 import { FeedbackContentProps } from '@/entities/feedback/model/types';
 import { useRouter } from 'next/navigation';
-import FeedbackForm from '@/shared/ui/FeedbackForm';
+import FeedbackForm from '@/shared/ui/feedback/FeedbackForm';
 
 export default function FeedbackContent({ isModal = false }: FeedbackContentProps) {
   const router = useRouter();
@@ -17,8 +17,8 @@ export default function FeedbackContent({ isModal = false }: FeedbackContentProp
 
   if (isModal) {
     return (
-      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-        <div className="bg-white p-8 rounded-lg max-w-md w-full">
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => router.back()}>
+        <div className="bg-white p-8 rounded-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
           <div className="flex justify-between items-start mb-4">
             <h2 className="text-2xl font-bold text-background">피드백</h2>
             <button onClick={handleClose} className="text-rose-500 cursor-pointer text-xl font-bold">

@@ -1,14 +1,10 @@
-'use client';
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
-import { useParams } from 'next/navigation';
-
-export default function ProjectDetail() {
-  const { id } = useParams();
   return (
     <>
-      <div>
-        <p>project detail : {id}</p>
-      </div>
+      <div>전체화면</div>
+      <div>Project: {id}</div>
     </>
   );
 }
