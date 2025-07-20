@@ -3,6 +3,7 @@
 import { FeedbackContentProps } from '@/entities/feedback/model/types';
 import { useRouter } from 'next/navigation';
 import FeedbackForm from '@/shared/ui/feedback/FeedbackForm';
+import { useEffect } from 'react';
 
 export default function FeedbackContent({ isModal = false }: FeedbackContentProps) {
   const router = useRouter();
@@ -14,6 +15,14 @@ export default function FeedbackContent({ isModal = false }: FeedbackContentProp
       router.push('/');
     }
   };
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') router.back();
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [router]);
 
   if (isModal) {
     return (
