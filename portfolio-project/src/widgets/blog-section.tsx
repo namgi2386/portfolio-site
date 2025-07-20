@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export default function BlogSection() {
   return (
-    <div className="w-full px-4 py-12 bg-gray-900">
+    <div className="w-full px-4 py-12 ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-paperlogy text-4xl md:text-5xl font-bold text-white mb-12">Blog</h2>
+        <h2 className="font-paperlogy text-4xl md:text-5xl font-bold text-foreground mb-12">Blog</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* 블로그 포스트 1 */}
