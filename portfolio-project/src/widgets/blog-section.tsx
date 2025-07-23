@@ -4,7 +4,7 @@ import TempBlogSection from '@/widgets/blog-temp-section';
 import axios from 'axios';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { AiOutlinePushpin } from 'react-icons/ai';
+import { BsFillPinAngleFill } from 'react-icons/bs';
 
 export default function BlogSection() {
   const [blogs, setBlogs] = useState<BlogData[]>([]);
@@ -22,6 +22,11 @@ export default function BlogSection() {
       console.error('axios get error :', error);
     }
   };
+
+  const handleBlogClick = (blogUrl: string) => {
+    window.open(blogUrl, '_blank', 'noopener,noreferrer');
+  };
+
   useEffect(() => {
     getBlogs();
   }, []);
@@ -41,12 +46,16 @@ export default function BlogSection() {
             <p className="text-gray-500">블로그를 준비중입니다.</p>
           ) : (
             blogs.map((blog) => (
-              <div key={blog.id} className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div
+                key={blog.id}
+                onClick={() => handleBlogClick(blog.blog_url)}
+                className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
                 <div className="aspect-video bg-gray-700 relative overflow-hidden relative ">
                   {/* 3. 핀 표시 추가 */}
                   {blog.is_pinned && (
-                    <div className="absolute top-1 right-1 z-10 bg-rose-500 rounded-full p-1">
-                      <AiOutlinePushpin className="text-white text-xl" />
+                    <div className="absolute top-2 right-2 z-10">
+                      <BsFillPinAngleFill className="text-white text-xl" />
                     </div>
                   )}
                   {/* 이미지 */}
@@ -60,7 +69,7 @@ export default function BlogSection() {
                       <>
                         <span>•</span>
                         {/* 태그 중 1번 */}
-                        <span>{blog.tags[0]}</span>
+                        <span>{blog.prime_tag}</span>
                       </>
                     )}
                   </div>

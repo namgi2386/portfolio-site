@@ -13,6 +13,8 @@ export interface BlogData {
   is_pinned: boolean;
   image_url: string;
   tags: string[];
+  blog_url: string;
+  prime_tag: string;
 }
 
 export type BlogListResponse = BlogApiResponse<BlogData[]>;
@@ -27,4 +29,6 @@ export const initialBlog: BlogData = {
   is_pinned: false,
   image_url: '',
   tags: [],
+  blog_url: '',
+  prime_tag: '',
 };
