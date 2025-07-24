@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
-import Sidebar from '@/components/Sidebar';
+import Sidebar from '@/shared/ui/Sidebar';
 
 export const metadata: Metadata = {
   title: 'portfolio-project',
