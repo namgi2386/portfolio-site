@@ -7,7 +7,7 @@ export default function ScrollButton() {
 
   useEffect(() => {
     const visibleCounter = () => {
-      setIsVisible(window.pageYOffset > 300); // 위치 300 감지 
+      setIsVisible(window.pageYOffset > 300); // 위치 300 감지
     };
     window.addEventListener('scroll', visibleCounter); // 리스너추가
     return () => window.removeEventListener('scroll', visibleCounter); // 클린업
@@ -17,8 +17,10 @@ export default function ScrollButton() {
   };
   if (!isVisible) return null;
   return (
-    <div className="border border-gray-100 w-12 h-16 rounded-full flex items-center justify-center cursor-pointer" onClick={scrolling}>
-      <FaAngleUp className="text-2xl" />
+    <div className="fixed bottom-6 right-6 z-50">
+      <div className="border border-gray-100 w-12 h-16 rounded-full flex items-center justify-center cursor-pointer bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10" onClick={scrolling}>
+        <FaAngleUp className="text-2xl" />
+      </div>
     </div>
   );
 }

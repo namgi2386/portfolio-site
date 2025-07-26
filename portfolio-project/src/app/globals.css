@@ -110,6 +110,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 폰트 유틸리티 클래스 */
 @utility font-paperlogy {
   font-family: var(--font-paperlogy);
