@@ -1,0 +1,24 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { FaAngleUp } from 'react-icons/fa';
+
+export default function ScrollButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const visibleCounter = () => {
+      setIsVisible(window.pageYOffset > 300); // 위치 300 감지 
+    };
+    window.addEventListener('scroll', visibleCounter); // 리스너추가
+    return () => window.removeEventListener('scroll', visibleCounter); // 클린업
+  }, []);
+  const scrolling = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // 상단으로 스무스하게
+  };
+  if (!isVisible) return null;
+  return (
+    <div className="border border-gray-100 w-12 h-16 rounded-full flex items-center justify-center cursor-pointer" onClick={scrolling}>
+      <FaAngleUp className="text-2xl" />
+    </div>
+  );
+}

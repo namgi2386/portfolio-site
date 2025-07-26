@@ -1,5 +1,6 @@
 import ThemeToggle from '@/shared/ui/ThemeToggle';
 import Link from 'next/link';
+import ScrollButton from '@/shared/ui/ScrollButton';
 
 export default function Sidebar() {
   return (
@@ -18,7 +19,9 @@ export default function Sidebar() {
           <div>피드백</div>
         </Link>
       </div>
+      <div className="fixed bottom-6 right-6 z-50 ">
+        <ScrollButton />
+      </div>
     </>
   );
 }
-
