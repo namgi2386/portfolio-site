@@ -24,13 +24,15 @@ export function Bold({ children, className = '' }: BoldProps) {
 
 export default function SectionBox({ children, className = '' }: Props) {
   return (
-    <div className={`font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-6 md:p-8 text-no1 dark:text-no3 leading-relaxed text-base md:text-lg ${className}`}>{children}</div>
+    <div className={`font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-6 md:p-8 text-no1 dark:text-no3 leading-relaxed text-base md:text-lg tracking-wider ${className}`}>
+      {children}
+    </div>
   );
 }
 
 export function SectionBoxSmall({ children, className = '' }: Props) {
   return (
-    <div className={`font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md ${className}`}>{children}</div>
+    <div className={`font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md  ${className}`}>{children}</div>
   );
 }
 
@@ -43,8 +45,8 @@ export function SectionBoxBgNone({ children, className = '' }: Props) {
 export function SectionBoxStack({ children, imgsrc1, imgsrc2, name1, name2, type }: StackProps) {
   if (type === 'prime') {
     return (
-      <div className="font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md">
-        <div className="flex flex-col gap-1 justify-between h-full">
+      <div className="font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md ">
+        <div className="flex flex-col gap-3 h-full">
           <div className="flex items-center space-x-3">
             <Image src={imgsrc1} alt={name1} width={40} height={40} className="rounded" />
             {imgsrc2 && name2 ? <Image src={imgsrc2} alt={name2} width={40} height={40} className="rounded" /> : <></>}
@@ -59,8 +61,8 @@ export function SectionBoxStack({ children, imgsrc1, imgsrc2, name1, name2, type
     );
   } else if (type === 'normal') {
     return (
-      <div className="font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md lg:min-h-46">
-        <div className="flex flex-col gap-1 justify-between h-full">
+      <div className="font-paperlogy bg-no0 dark:bg-no2 shadow-custom dark:shadow-none rounded-lg p-3 md:p-4 text-no1 dark:text-no3 leading-relaxed text-sm lg:text-md lg:min-h-46 ">
+        <div className="flex flex-col gap-3  h-full">
           <div className="flex items-center space-x-3">
             <Image src={imgsrc1} alt={name1} width={40} height={40} className="rounded" />
             {imgsrc2 && name2 ? <Image src={imgsrc2} alt={name2} width={40} height={40} className="rounded" /> : <></>}
