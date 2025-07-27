@@ -63,12 +63,14 @@
 :root {
   --background: #f2f2f2;
   --foreground: #0f182a;
+  --custompurple: #aa42de;
 }
 
 /* 다크모드 설정 */
 .dark {
   --background: #0f182a;
   --foreground: #f2f2f2;
+  --custompurple: #c27aff;
 }
 
 /* 시스템 설정 따르기 */
@@ -76,6 +78,7 @@
   :root:not(.light) {
     --background: #0f182a;
     --foreground: #f2f2f2;
+    --custompurple: #c27aff;
   }
 }
 
@@ -84,6 +87,7 @@
   /* 색상 변수 */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-custompurple: var(--custompurple);
   --color-no0: #f2f2f2;
   --color-no1: #0f182a;
   --color-no2: #273040;
