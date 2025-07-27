@@ -18,7 +18,7 @@ export default function FinalSection() {
             <div className="w-24 h-1 bg-custompurple mx-auto rounded-full"></div>
           </div>
 
-          <p className="text-xl md:text-2xl text-no3 max-w-2xl mx-auto leading-relaxed">감사합니다.</p>
+          <p className="text-xl md:text-2xl text-no2 dark:text-no3 max-w-2xl mx-auto leading-relaxed">감사합니다.</p>
         </div>
 
         {/* CTA 버튼들 */}
