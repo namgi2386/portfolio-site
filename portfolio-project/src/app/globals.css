@@ -57,19 +57,21 @@
   src: url('/fonts/GmarketSansTTF/GmarketSansTTFBold.ttf') format('truetype');
 }
 
+@variant dark (&:where(.dark, .dark *));
+
 /* 기본색상 설정 */
 :root {
   --background: #f2f2f2;
   --foreground: #0f182a;
 }
 
-/* 다크모드 설정 - media query 대신 class 사용 */
+/* 다크모드 설정 */
 .dark {
   --background: #0f182a;
   --foreground: #f2f2f2;
 }
 
-/* 시스템 설정 따르기 (선택사항) */
+/* 시스템 설정 따르기 */
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     --background: #0f182a;
@@ -121,4 +123,9 @@ html {
 
 @utility font-gmarket {
   font-family: var(--font-gmarket);
+}
+
+/* globals.css에 추가 */
+@utility shadow-custom {
+  box-shadow: 0 0 0.5rem 0 rgba(68, 68, 68, 0.4);
 }

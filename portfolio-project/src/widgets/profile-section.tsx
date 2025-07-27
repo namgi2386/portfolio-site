@@ -1,3 +1,4 @@
+import SectionBox, { Bold, SectionBoxSmall } from '@/shared/ui/SectionBox';
 import Image from 'next/image';
 
 export default function ProfileSection() {
@@ -39,21 +40,19 @@ export default function ProfileSection() {
               </div>
 
               {/* 경력 정보 */}
-              <div className="bg-gray-800 rounded-lg p-3 lg:p-4 space-y-3 lg:space-y-4">
-                <div>
-                  <h4 className="font-bold text-white mb-1 text-sm lg:text-base">SQLD</h4>
-                  <p className="text-xs lg:text-sm text-gray-400">2024.03</p>
+              <SectionBoxSmall>
+                <div className="space-y-3 lg:space-y-4">
+                  <Bold>SQLD</Bold>
+                  <p>2024.03</p>
+                  <Bold>정보처리기사</Bold>
+                  <p>2024.06</p>
+                  <Bold>삼성 청년 SW 아카데미 12기</Bold>
+                  <div>
+                    <p>2024.07.01 - 2025.05.29</p>
+                    <p>성적 우수 (1등)</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-white mb-1 text-sm lg:text-base">정보처리기사</h4>
-                  <p className="text-xs lg:text-sm text-gray-400">2024.06</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-white mb-1 text-sm lg:text-base">삼성 청년 SW 아카데미 12기</h4>
-                  <p className="text-xs lg:text-sm text-gray-400">2024.07.01 - 2025.05.29</p>
-                  <p className="text-xs lg:text-sm text-gray-400">성적 우수 (1등)</p>
-                </div>
-              </div>
+              </SectionBoxSmall>
             </div>
           </div>
         </div>
@@ -61,24 +60,22 @@ export default function ProfileSection() {
         {/* 오른쪽: 자기소개 */}
         <div className="lg:col-span-9 space-y-6">
           {/* 나머지 코드는 동일 */}
-          <div className="bg-gray-800 rounded-lg p-6 md:p-8 ">
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              <p className="text-lg md:text-xl">
-                <span className="font-bold text-white">React, Next.js, TypeScript</span> 중심의 웹 개발 역량을 쌓은 프론트엔드 개발자입니다.
-              </p>
-
-              <p className="text-base md:text-lg">
-                <span className="font-bold text-white">팀장</span>으로서 6인 규모 프로젝트를
-                <span className="font-bold text-white"> 기간 내 성공적으로 완성</span>한 경험이 있고, <span className="font-bold text-white">팀원</span>으로는
-                <span className="font-bold text-white"> 새로운 기술 스택을 빠르게</span>
+          <SectionBox>
+            <div className="space-y-6">
+              <div>
+                <Bold>React, Next.js, TypeScript</Bold> 중심의 웹 개발 역량을 쌓은 프론트엔드 개발자입니다.
+              </div>
+              <div>
+                <Bold>팀장</Bold>으로서 6인 규모 프로젝트를
+                <Bold> 기간 내 성공적으로 완성</Bold>한 경험이 있고, <Bold>팀원</Bold>으로는
+                <Bold> 새로운 기술 스택을 빠르게</Bold>
                 습득하여 팀 속도에 맞춰합니다.
-              </p>
-
-              <p className="text-base md:text-lg">
-                <span className="font-bold text-white">기능 완성</span>을 우선시 하며, 팀의 개발 속도에 맞춰 <span className="font-bold text-white">안정적</span>인 결과물을 만들어 냅니다.
-              </p>
+              </div>
+              <div>
+                <Bold>기능 완성</Bold>을 우선시 하며, 팀의 개발 속도에 맞춰 <Bold>안정적</Bold>인 결과물을 만들어 냅니다.
+              </div>
             </div>
-          </div>
+          </SectionBox>
 
           <div className="space-y-6 ">
             <h2 className="font-paperlogy text-3xl md:text-4xl font-bold text-foreground">Skill & Tools</h2>
