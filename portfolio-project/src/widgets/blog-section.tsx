@@ -11,7 +11,7 @@ export default function BlogSection() {
   const [error, setError] = useState('');
   const getBlogs = async () => {
     try {
-      const response = await axios.get<BlogListResponse>('/api/blogs');
+      const response = await axios.get<BlogListResponse>('/api/blog');
       if (response.data.status === 'success') {
         setBlogs(response.data.data);
       } else {
