@@ -27,14 +27,13 @@ export default function FeedbackContent({ isModal = false }: FeedbackContentProp
   if (isModal) {
     return (
       <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={() => router.back()}>
-        <div className="bg-white p-8 rounded-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
+        <div className="bg-foreground p-8 rounded-lg max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
           <div className="flex justify-between items-start mb-4">
-            <h2 className="text-2xl font-bold text-background">피드백</h2>
-            <button onClick={handleClose} className="text-rose-500 cursor-pointer text-xl font-bold">
+            <h2 className="text-background font-paperlogy">피드백</h2>
+            <button onClick={handleClose} className="text-background cursor-pointer text-xl ">
               ✕
             </button>
           </div>
-          <p className="text-background">여기는 모달로 열린 피드백입니다!</p>
           <FeedbackForm />
         </div>
       </div>
@@ -42,14 +41,8 @@ export default function FeedbackContent({ isModal = false }: FeedbackContentProp
   }
 
   return (
-    <main className="min-h-screen p-8">
-      <div className="flex justify-start items-center bg-green-900 gap-10">
-        <button onClick={handleClose} className="text-rose-500 text-4xl cursor-pointer">
-          ✕
-        </button>
-        <h2 className="text-4xl font-bold">피드백</h2>
-      </div>
-      <p className="">직접 URL로 접근했을 때 보이는 전체 페이지입니다.</p>
+    <main className="min-h-screen w-full max-w-6xl mx-auto px-4 py-16">
+      <h2 className="text-4xl font-bold font-paperlogy my-6">피드백</h2>
       <FeedbackForm />
     </main>
   );
