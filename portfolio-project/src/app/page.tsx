@@ -8,15 +8,25 @@ export default function Home() {
   return (
     <>
       {/* 메인 타이틀 섹션 */}
-      <MainTitleSection />
+      <div id="main-title-section" className="pt-12">
+        <MainTitleSection />
+      </div>
       {/* 프로필 섹션 */}
-      <ProfileSection />
+      <div id="profile-section" className="pt-12">
+        <ProfileSection />
+      </div>
       {/* 프로젝트 섹션 */}
-      <ProjectSection />
+      <div id="project-section" className="pt-12">
+        <ProjectSection />
+      </div>
       {/* 블로그 섹션 */}
-      <BlogSection />
+      <div id="blog-section" className="pt-12">
+        <BlogSection />
+      </div>
       {/* 마지막 섹션 */}
-      <FinalSection />
+      <div id="final-section" className="pt-12">
+        <FinalSection />
+      </div>
     </>
   );
 }

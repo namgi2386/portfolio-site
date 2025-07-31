@@ -1,5 +1,6 @@
-'use client';
 import Image from 'next/image';
+import Link from 'next/link';
+import { BsFillPinAngleFill } from 'react-icons/bs';
 
 export default function TempBlogSection() {
   return (
@@ -7,128 +8,184 @@ export default function TempBlogSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="font-paperlogy text-4xl md:text-5xl font-bold text-foreground mb-12">Blog (offline)</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-paperlogy tracking-wider">
           {/* 블로그 포스트 1 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog1.png" alt="블로그 포스트 1" fill className="object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2025.01.15</span>
-                <span>•</span>
-                <span>Next.js</span>
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <div className="absolute top-2 right-2 z-10">
+                <BsFillPinAngleFill className="text-background text-xl" />
               </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">Next.js 15 App Router와 Pages Router 성능 비교 분석</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">Next.js 15에서 새롭게 도입된 App Router와 기존 Pages Router의 성능을 실제 프로젝트에서 비교 분석한 내용을 공유합니다...</p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-purple-600 text-white px-2 py-1 rounded">React</span>
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">Performance</span>
+              <Image src="/images/blog/blog-error-box.png" alt="에러일수도있지" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+            </div>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 7월 25일</span>
+                  <span>•</span>
+                  <span>Hello Error</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">현재 블로그를 불러올 수 없습니다.</h3>
+                <p className="text-sm text-no3 line-clamp-3">임시 게시글 클릭시 블로그로 이동할 수 있습니다.</p>
+              </div>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># im</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># nam</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># gi</span>
               </div>
             </div>
-          </div>
-
+          </Link>
           {/* 블로그 포스트 2 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog-error-box.png" alt="블로그 포스트 2" fill className="object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2025.01.08</span>
-                <span>•</span>
-                <span>TypeScript</span>
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <div className="absolute top-2 right-2 z-10">
+                <BsFillPinAngleFill className="text-background text-xl" />
               </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">TypeScript 고급 타입 활용으로 런타임 에러 90% 줄이기</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">실무에서 자주 발생하는 런타임 에러를 TypeScript의 고급 타입 시스템을 활용하여 컴파일 타임에 잡는 방법을 소개합니다...</p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">TypeScript</span>
-                <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">Best Practice</span>
-              </div>
+              <Image src="/images/blog/blog8.png" alt="Next.js Image컴포넌트를 활용한 이미지 최적화" fill className="object-cover transition-transform duration-300 hover:scale-110" />
             </div>
-          </div>
-
-          {/* 블로그 포스트 3 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog3.png" alt="블로그 포스트 3" fill className="object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2024.12.28</span>
-                <span>•</span>
-                <span>React</span>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 7월 18일</span>
+                  <span>•</span>
+                  <span>Next.js</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">Next.js Image컴포넌트를 활용한 이미지 최적화</h3>
+                <p className="text-sm text-no3 line-clamp-3">Next.js의 Image 컴포넌트를 이용하여 최적화하는 과정에서 고민해본 내용들을 정리해뒀다.</p>
               </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">React 18 Concurrent Features로 UX 개선하기</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">React 18의 Concurrent Features인 Suspense, Transition, useDeferredValue를 활용하여 사용자 경험을 개선한 사례를 공유합니다...</p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-cyan-600 text-white px-2 py-1 rounded">React 18</span>
-                <span className="text-xs bg-orange-600 text-white px-2 py-1 rounded">UX</span>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># JPEG</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># image</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># optimization</span>
               </div>
             </div>
-          </div>
-
-          {/* 블로그 포스트 4 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog4.png" alt="블로그 포스트 4" fill className="object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2024.12.20</span>
-                <span>•</span>
-                <span>Testing</span>
-              </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">Jest + RTL로 프론트엔드 테스트 커버리지 80% 달성하기</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">
-                실무 프로젝트에서 Jest와 React Testing Library를 활용하여 효과적인 테스트 전략을 수립하고 높은 커버리지를 달성한 경험을 공유합니다...
-              </p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-red-600 text-white px-2 py-1 rounded">Testing</span>
-                <span className="text-xs bg-yellow-600 text-white px-2 py-1 rounded">Jest</span>
-              </div>
-            </div>
-          </div>
-
-          {/* 블로그 포스트 5 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog5.png" alt="블로그 포스트 5" fill className="object-cover transition-transform duration-300 hover:scale-110" />
-            </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2024.12.15</span>
-                <span>•</span>
-                <span>Performance</span>
-              </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">Core Web Vitals 최적화로 Lighthouse 성능 점수 95점 달성</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">실제 운영 중인 웹사이트의 Core Web Vitals를 분석하고 최적화하여 Lighthouse 성능 점수를 대폭 개선한 과정을 상세히 기록했습니다...</p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">Performance</span>
-                <span className="text-xs bg-purple-600 text-white px-2 py-1 rounded">Optimization</span>
-              </div>
-            </div>
-          </div>
+          </Link>
 
           {/* 블로그 포스트 6 */}
-          <div className="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="aspect-video bg-gray-700 relative overflow-hidden">
-              <Image src="/images/blog/blog6.png" alt="블로그 포스트 6" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <Image src="/images/blog/blog7.png" alt="남기야 WebSocket은 Socket을 대신할 수 없어" fill className="object-cover transition-transform duration-300 hover:scale-110" />
             </div>
-            <div className="p-5 space-y-3">
-              <div className="flex items-center space-x-2 text-xs text-gray-400">
-                <span>2024.12.08</span>
-                <span>•</span>
-                <span>Architecture</span>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 7월 22일</span>
+                  <span>•</span>
+                  <span>Network</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">남기야 WebSocket은 Socket을 대신할 수 없어</h3>
+                <p className="text-sm text-no3 line-clamp-3">커널에서 네트워크 계층에 접근할 수 있는 도구가 소켓이며, 그중에서 TCP프로토콜에 접근하는 소켓이 TCP소켓이다. webSocket은 뭘까용</p>
               </div>
-              <h3 className="text-lg font-bold text-white line-clamp-2">FSD 아키텍처 도입으로 대규모 프론트엔드 프로젝트 관리하기</h3>
-              <p className="text-sm text-gray-400 line-clamp-3">Feature-Sliced Design 아키텍처를 실제 프로젝트에 적용하면서 겪은 시행착오와 얻은 인사이트를 정리했습니다...</p>
-              <div className="flex items-center space-x-2">
-                <span className="text-xs bg-indigo-600 text-white px-2 py-1 rounded">Architecture</span>
-                <span className="text-xs bg-teal-600 text-white px-2 py-1 rounded">FSD</span>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># CS</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># Socket</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># WebSocket</span>
               </div>
             </div>
-          </div>
+          </Link>
+
+          {/* 블로그 포스트 4 */}
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <Image src="/images/blog/blog5.png" alt="Next.js에서 다크모드 적용시 주의할점" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+            </div>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 7월 13일</span>
+                  <span>•</span>
+                  <span>Next.js</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">Next.js에서 다크모드 적용시 주의할점 + next-themes 사용법</h3>
+                <p className="text-sm text-no3 line-clamp-3">
+                  Next.js SSR 환경에서 다크모드는 많은 고려사항이 필요하다. 상태관리, localStorage, 시스템테마, 깜빡임(FOUC), Hydration, 인라인 스크립트에 대해 고민해본 뒤 next-themes 라이브러리로
+                  해결해보자.
+                </p>
+              </div>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># FOUC</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># SSR</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># next-themes</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* 블로그 포스트 3 */}
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <Image src="/images/blog/blog6.png" alt="Supabase RLS 사용하지 않고 개발하기" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+            </div>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 7월 9일</span>
+                  <span>•</span>
+                  <span>Database</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">Supabase RLS (Row Level Security) 사용하지 않고 개발하기</h3>
+                <p className="text-sm text-no3 line-clamp-3">
+                  Next.js에서 Supabase 사용시, RLS없이 어떻게 안전하게 데이터를 보호할 수 있을지, 그리고 환경변수는 어떻게 관리해야 하는지에 대한 고민 과정에 관한 내용이다.
+                </p>
+              </div>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># RLS</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># Next.js</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># Supabase</span>
+              </div>
+            </div>
+          </Link>
+
+          {/* 블로그 포스트 1 */}
+          <Link
+            href="https://velog.io/@happynj2697/posts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+          >
+            <div className="aspect-video relative overflow-hidden">
+              <Image src="/images/blog/blog1.png" alt="세미콜론 실수로 코테 떨어져보자" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+            </div>
+            <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-2 text-xs text-no3">
+                  <span>2025년 6월 20일</span>
+                  <span>•</span>
+                  <span>Algorithm_JS</span>
+                </div>
+                <h3 className="text-lg text-no0 line-clamp-2">세미콜론 실수로 코테 떨어져보자</h3>
+                <p className="text-sm text-no3 line-clamp-3">세미콜론, 특정 상황에서는 반드시 써야 한다.</p>
+              </div>
+              <div className="flex items-center space-x-2 flex-wrap gap-1">
+                <span className="text-xs text-no0 px-2 py-1 rounded"># Algorithm</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># ASI</span>
+                <span className="text-xs text-no0 px-2 py-1 rounded"># Prettier</span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

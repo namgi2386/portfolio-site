@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
-import Sidebar from '@/shared/ui/Sidebar';
+import Fixedbar from '@/shared/ui/Fixedbar';
 
 export const metadata: Metadata = {
   title: '임남기 | Frontend Developer portfolio',
@@ -76,7 +76,7 @@ export default function RootLayout({ children, modal }: { children: React.ReactN
     <html lang="ko" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Sidebar />
+          <Fixedbar />
           {children}
           {modal}
         </ThemeProvider>

@@ -57,23 +57,28 @@
   src: url('/fonts/GmarketSansTTF/GmarketSansTTFBold.ttf') format('truetype');
 }
 
+@variant dark (&:where(.dark, .dark *));
+
 /* 기본색상 설정 */
 :root {
   --background: #f2f2f2;
   --foreground: #0f182a;
+  --custompurple: #aa42de;
 }
 
-/* 다크모드 설정 - media query 대신 class 사용 */
+/* 다크모드 설정 */
 .dark {
   --background: #0f182a;
   --foreground: #f2f2f2;
+  --custompurple: #c27aff;
 }
 
-/* 시스템 설정 따르기 (선택사항) */
+/* 시스템 설정 따르기 */
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
     --background: #0f182a;
     --foreground: #f2f2f2;
+    --custompurple: #c27aff;
   }
 }
 
@@ -82,6 +87,7 @@
   /* 색상 변수 */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-custompurple: var(--custompurple);
   --color-no0: #f2f2f2;
   --color-no1: #0f182a;
   --color-no2: #273040;
@@ -94,6 +100,7 @@
   --color-rose-01: #ff5151;
   --color-green-01: #6bde7d;
   --color-green-02: #ade4af;
+  --color-green-velog: #20c393;
 
   /* 폰트 변수 */
   --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -110,6 +117,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 폰트 유틸리티 클래스 */
 @utility font-paperlogy {
   font-family: var(--font-paperlogy);
@@ -117,4 +128,9 @@ body {
 
 @utility font-gmarket {
   font-family: var(--font-gmarket);
+}
+
+/* globals.css에 추가 */
+@utility shadow-custom {
+  box-shadow: 0 0 0.5rem 0 rgba(68, 68, 68, 0.4);
 }

@@ -56,7 +56,7 @@ export default function FeedbackForm() {
 
   return (
     <>
-      <div className="bg-foreground">
+      <div>
         <div>
           <div className="text-background">완성도</div>
           <div className="space-x-1">
