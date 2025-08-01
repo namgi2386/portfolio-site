@@ -110,7 +110,7 @@
 
 body {
   background: var(--background) url('/images/background/texture.webp') repeat;
-  background-size: 100px 100px;
+  background-size: 300px 300px;
   color: var(--foreground);
   font-family: var(--font-sans);
   font-feature-settings: 'liga' 1, 'calt' 1;
@@ -153,4 +153,12 @@ html {
 /* globals.css에 추가 */
 @utility shadow-custom {
   box-shadow: 0 0 0.5rem 0 rgba(68, 68, 68, 0.4);
+}
+
+@utility bg-textured {
+  background: var(--background) url('/images/background/texture.webp') repeat;
+  background-size: 500px 500px;
+}
+.dark .bg-textured {
+  background-image: linear-gradient(rgba(15, 24, 42, 0.93), rgba(15, 24, 42, 0.93)), url('/images/background/texture.webp');
 }

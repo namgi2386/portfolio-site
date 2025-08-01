@@ -67,7 +67,7 @@ export default function ProjectModal({ id }: ProjectModalProps) {
       </button>
 
       {/* 모달 콘텐츠 */}
-      <div className="relative w-full max-w-6xl mx-16 bg-background p-8 rounded-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="relative w-full max-w-6xl mx-16 bg-textured p-8 rounded-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button onClick={() => router.back()} className="absolute right-10 top-10 z-20 cursor-pointer hover:text-no43 transition duration-200 ease-in-out">
           <IoClose size={24} />
         </button>

@@ -13,19 +13,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   switch (id) {
     case '1':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal1 />
         </div>
       );
     case '2':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal2 />
         </div>
       );
     case '3':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal3 />
         </div>
       );
