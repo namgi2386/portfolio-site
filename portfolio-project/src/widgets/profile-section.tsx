@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { IoPhonePortrait } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
+import { SiVelog } from 'react-icons/si';
 
 export default function ProfileSection() {
   return (
@@ -12,7 +13,7 @@ export default function ProfileSection() {
         {/* 왼쪽: 프로필 이미지와 기본 정보 */}
         <div className="lg:col-span-3">
           {/* lg 미만에서는 가로 배치 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 h-full">
+          <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 h-full">
             {/* 프로필 이미지 */}
             <div className="col-span-1 w-full aspect-square rounded-lg overflow-hidden relative">
               <Image src="/images/profiles/imnamgi_port_05.png" alt="프로필 사진" fill className="object-cover" priority={true} sizes="(max-width: 768px) 33vw, (max-width: 1200px) 50vw, 33vw" />
@@ -40,6 +41,13 @@ export default function ProfileSection() {
                       <IoPhonePortrait className="text-lg text-background dark:text-no2" />
                     </div>
                     <span className="text-ellipsis overflow-hidden whitespace-nowrap">010-2386-4855</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <SiVelog className="text-2xl text-foreground" />
+                    <span>Blog</span>
+                    <Link href="https://velog.io/@happynj2697/posts" className="text-custompurple font-semibold cursor-pointer" target="_blank" rel="noopener noreferrer">
+                      보러가기
+                    </Link>
                   </div>
                   <div className="flex gap-2">
                     <FaGithub className="text-2xl text-foreground" />
