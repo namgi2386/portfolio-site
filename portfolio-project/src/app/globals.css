@@ -61,7 +61,7 @@
 
 /* 기본색상 설정 */
 :root {
-  --background: #f2f2f2;
+  --background: #efefef;
   --foreground: #0f182a;
   --custompurple: #aa42de;
 }
@@ -109,12 +109,32 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background) url('/images/background/texture.webp') repeat;
+  background-size: 100px 100px;
   color: var(--foreground);
   font-family: var(--font-sans);
   font-feature-settings: 'liga' 1, 'calt' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 반응형 텍스처 크기 */
+@media (min-width: 768px) {
+  body {
+    background-size: 300px 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-attachment: fixed;
+    background-size: 500px 500px;
+  }
+}
+
+/* 다크모드 오버레이 */
+.dark body {
+  background-image: linear-gradient(rgba(15, 24, 42, 0.93), rgba(15, 24, 42, 0.93)), url('/images/background/texture.webp');
 }
 
 html {
