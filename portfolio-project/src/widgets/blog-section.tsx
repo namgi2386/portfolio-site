@@ -46,11 +46,7 @@ export default function BlogSection() {
             <p className="text-foreground">블로그를 준비중입니다.</p>
           ) : (
             blogs.map((blog) => (
-              <div
-                key={blog.id}
-                onClick={() => handleBlogClick(blog.blog_url)}
-                className=" rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
-              >
+              <div key={blog.id} onClick={() => handleBlogClick(blog.blog_url)} className=" rounded-lg overflow-hidden cursor-pointer flex flex-col shadow-custom group">
                 <div className="aspect-video relative overflow-hidden relative ">
                   {/* 3. 핀 표시 추가 */}
                   {blog.is_pinned && (
@@ -58,12 +54,20 @@ export default function BlogSection() {
                       <BsFillPinAngleFill className="text-background text-xl" />
                     </div>
                   )}
+                  {/* 태그 */}
+                  <div className="opacity-0 group-hover:opacity-100 duration-200 ease-in-out absolute bottom-2 left-2 z-10 flex items-center flex-wrap gap-0.5 max-w-4/5 bg-black/90 rounded-xl px-2 py-1">
+                    {blog.tags.map((tag, i) => (
+                      <span key={i} className="text-xs font-sans tracking-normal text-no0 px-2 py-0.5 rounded">
+                        # {tag}
+                      </span>
+                    ))}
+                  </div>
                   {/* 이미지 */}
-                  <Image src={blog.image_url || '/images/blog/blog1.png'} alt="블로그 포스트 1" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+                  <Image src={blog.image_url || '/images/blog/blog1.png'} alt="블로그 포스트 1" fill className="object-cover duration-300 group-hover:scale-110" />
                 </div>
-                <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
+                <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-background/50">
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-2 text-xs text-no3">
+                    <div className="flex items-center space-x-2 text-xs text-no2 dark:text-no3">
                       {/* 날짜 */}
                       <span>{blog.written_date}</span>
                       {blog.tags.length > 0 && (
@@ -75,16 +79,9 @@ export default function BlogSection() {
                       )}
                     </div>
                     {/* 제목 */}
-                    <h3 className="text-lg text-no0 line-clamp-2">{blog.title}</h3>
+                    <h3 className="text-lg text-foreground line-clamp-2">{blog.title}</h3>
                     {/* 설명 */}
-                    <p className="text-sm text-no3 line-clamp-3">{blog.description}</p>
-                  </div>
-                  <div className="flex items-center space-x-2 flex-wrap gap-1 ">
-                    {blog.tags.map((tag, i) => (
-                      <span key={i} className="text-xs text-no0 px-2 py-1 rounded">
-                        # {tag}
-                      </span>
-                    ))}
+                    <p className="text-sm text-no2 dark:text-no3 line-clamp-3">{blog.description}</p>
                   </div>
                 </div>
               </div>

@@ -14,13 +14,13 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
               <div className="absolute top-2 right-2 z-10">
                 <BsFillPinAngleFill className="text-background text-xl" />
               </div>
-              <Image src="/images/blog/blog-error-box.png" alt="에러일수도있지" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog-error-box.png" alt="에러일수도있지" fill className="object-cover duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
@@ -44,13 +44,13 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
               <div className="absolute top-2 right-2 z-10">
                 <BsFillPinAngleFill className="text-background text-xl" />
               </div>
-              <Image src="/images/blog/blog8.png" alt="Next.js Image컴포넌트를 활용한 이미지 최적화" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog8.png" alt="Next.js Image컴포넌트를 활용한 이미지 최적화" fill className="object-cover  duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
@@ -75,10 +75,10 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
-              <Image src="/images/blog/blog7.png" alt="남기야 WebSocket은 Socket을 대신할 수 없어" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog7.png" alt="남기야 WebSocket은 Socket을 대신할 수 없어" fill className="object-cover  duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
@@ -103,10 +103,10 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
-              <Image src="/images/blog/blog5.png" alt="Next.js에서 다크모드 적용시 주의할점" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog5.png" alt="Next.js에서 다크모드 적용시 주의할점" fill className="object-cover  duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
@@ -134,10 +134,10 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
-              <Image src="/images/blog/blog6.png" alt="Supabase RLS 사용하지 않고 개발하기" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog6.png" alt="Supabase RLS 사용하지 않고 개발하기" fill className="object-cover  duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
@@ -164,10 +164,10 @@ export default function TempBlogSection() {
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 flex flex-col shadow-custom"
+            className="rounded-lg overflow-hidden cursor-pointer duration-300 hover:scale-105 flex flex-col shadow-custom"
           >
             <div className="aspect-video relative overflow-hidden">
-              <Image src="/images/blog/blog1.png" alt="세미콜론 실수로 코테 떨어져보자" fill className="object-cover transition-transform duration-300 hover:scale-110" />
+              <Image src="/images/blog/blog1.png" alt="세미콜론 실수로 코테 떨어져보자" fill className="object-cover  duration-300 hover:scale-110" />
             </div>
             <div className="p-5 flex flex-col justify-between flex-grow gap-4 bg-no1">
               <div className="space-y-3">
