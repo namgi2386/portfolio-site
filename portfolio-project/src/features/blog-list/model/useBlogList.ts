@@ -1,5 +1,4 @@
-import { blogApi } from '@/entities/blogs/api/blogApi';
-import { BlogData } from '@/entities/blogs/model/types';
+import { blogApi, BlogData } from '@/entities/blogs';
 import { useEffect, useState } from 'react';
 
 export const useBlogList = () => {

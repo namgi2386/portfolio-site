@@ -1,4 +1,4 @@
-import { BlogData } from '@/entities/blogs/model/types';
+import { BlogData } from '@/entities/blogs';
 import { BsFillPinAngleFill } from 'react-icons/bs';
 import Image from 'next/image';
 

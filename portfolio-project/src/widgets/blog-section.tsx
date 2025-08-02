@@ -1,6 +1,5 @@
 'use client';
-import { useBlogList } from '@/features/blog-list/model/useBlogList';
-import { BlogCard } from '@/features/blog-list/ui/BlogCard';
+import { BlogCard, useBlogList } from '@/features/blog-list';
 import TempBlogSection from '@/widgets/blog-temp-section';
 
 export default function BlogSection() {
