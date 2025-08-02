@@ -1,6 +1,6 @@
-import ProjectModal1 from '@/shared/ui/project-detail/ProjectModal1';
-import ProjectModal2 from '@/shared/ui/project-detail/ProjectModal2';
-import ProjectModal3 from '@/shared/ui/project-detail/ProjectModal3';
+import ProjectModal1 from '@/features/projects/ui/ProjectModal1';
+import ProjectModal2 from '@/features/projects/ui/ProjectModal2';
+import ProjectModal3 from '@/features/projects/ui/ProjectModal3';
 import { redirect } from 'next/navigation';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {

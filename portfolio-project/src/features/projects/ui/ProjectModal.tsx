@@ -1,8 +1,8 @@
 'use client';
 
-import ProjectModal1 from '@/shared/ui/project-detail/ProjectModal1';
-import ProjectModal2 from '@/shared/ui/project-detail/ProjectModal2';
-import ProjectModal3 from '@/shared/ui/project-detail/ProjectModal3';
+import ProjectModal1 from '@/features/projects/ui/ProjectModal1';
+import ProjectModal2 from '@/features/projects/ui/ProjectModal2';
+import ProjectModal3 from '@/features/projects/ui/ProjectModal3';
 import { useRouter, redirect } from 'next/navigation';
 import { useEffect } from 'react';
 import { IoClose, IoChevronBack, IoChevronForward } from 'react-icons/io5';
