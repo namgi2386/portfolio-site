@@ -18,15 +18,12 @@ export default function FinalSection() {
             <div className="w-24 h-1 bg-custompurple mx-auto rounded-full"></div>
           </div>
 
-          <p className="text-xl md:text-2xl text-no2 dark:text-no3 max-w-2xl mx-auto leading-relaxed">감사합니다.</p>
+          {/* <p className="text-xl md:text-2xl text-no2 dark:text-no3 max-w-2xl mx-auto leading-relaxed">감사합니다.</p> */}
         </div>
 
         {/* CTA 버튼들 */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-          <Link
-            href="mailto:happynj2697@gmail.com"
-            className="group bg-custompurple hover:bg-no43 dark:hover:bg-no42 text-no0 font-bold py-4 px-4 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
+          <Link href="mailto:happynj2697@gmail.com" className="group bg-custompurple hover:bg-no43 dark:hover:bg-no42 text-no0 font-bold py-4 px-4 rounded-full duration-300 hover:scale-105">
             <div className="flex items-center justify-center">
               <MdOutlineEmail className="text-2xl" />
             </div>
@@ -37,7 +34,7 @@ export default function FinalSection() {
               href="https://github.com/namgi2386"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-no2/50 hover:bg-no2 text-no0 p-4 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="group bg-no2/50 hover:bg-no2 text-no0 p-4 rounded-full transition-all duration-300 hover:scale-105"
             >
               <FaGithub className="text-2xl" />
             </Link>
@@ -46,7 +43,7 @@ export default function FinalSection() {
               href="https://velog.io/@happynj2697/posts"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-green-velog hover:bg-green-velog/50 text-no0 p-4 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="group bg-green-velog hover:bg-green-velog/50 text-no0 p-4 rounded-full transition duration-300 hover:scale-105"
             >
               <SiVelog className="text-2xl" />
             </Link>

@@ -2,7 +2,7 @@
 
 import { FeedbackContentProps } from '@/entities/feedback/model/types';
 import { useRouter } from 'next/navigation';
-import FeedbackForm from '@/shared/ui/feedback/FeedbackForm';
+import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
 import { useEffect } from 'react';
 
 export default function FeedbackContent({ isModal = false }: FeedbackContentProps) {

@@ -1,6 +1,6 @@
-import ProjectModal1 from '@/shared/ui/project-detail/ProjectModal1';
-import ProjectModal2 from '@/shared/ui/project-detail/ProjectModal2';
-import ProjectModal3 from '@/shared/ui/project-detail/ProjectModal3';
+import ProjectModal1 from '@/features/projects/ui/ProjectModal1';
+import ProjectModal2 from '@/features/projects/ui/ProjectModal2';
+import ProjectModal3 from '@/features/projects/ui/ProjectModal3';
 import { redirect } from 'next/navigation';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
@@ -13,19 +13,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   switch (id) {
     case '1':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal1 />
         </div>
       );
     case '2':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal2 />
         </div>
       );
     case '3':
       return (
-        <div className="p-8">
+        <div className="py-32 px-16">
           <ProjectModal3 />
         </div>
       );

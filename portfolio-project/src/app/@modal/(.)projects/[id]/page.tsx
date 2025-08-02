@@ -1,4 +1,4 @@
-import ProjectModal from '@/shared/ui/project-detail/ProjectModal';
+import ProjectModal from '@/features/projects/ui/ProjectModal';
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
