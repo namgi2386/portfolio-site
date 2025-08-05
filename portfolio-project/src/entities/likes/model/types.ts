@@ -1,11 +1,18 @@
-export interface LikeApiResponse {
-  success: boolean;
-  count?: number;
-  message?: string;
+export interface LikeSuccessResponse {
+  success: true;
+  count: number;
 }
 
-export interface LikeRequest {
+export interface LikeErrorResponse {
+  success: false;
+  error: {
+    code: string;
+    message: string;
+  };
+}
+
+export type LikeApiResponse = LikeSuccessResponse | LikeErrorResponse;
+
+export interface LikeApiRequest {
   action: 'like' | 'unlike';
 }
-
-export type LikeCountResponse = LikeApiResponse;

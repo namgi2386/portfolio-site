@@ -1,3 +1,4 @@
+import LikeButton from '@/features/likes/ui/LikeButton';
 import MobileMenu from '@/shared/ui/MobileMenu';
 import ThemeToggle from '@/shared/ui/ThemeToggle';
 import Link from 'next/link';
@@ -27,6 +28,7 @@ export default function Topbar() {
           <Link href="/feedback" className={ColorStyle}>
             ☆★★★★
           </Link>
+          <LikeButton />
           <div className={`flex justify-center ${ColorStyle}`}>
             <ThemeToggle />
           </div>

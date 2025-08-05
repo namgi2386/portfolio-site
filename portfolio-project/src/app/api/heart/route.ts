@@ -17,7 +17,7 @@ export async function GET() {
     return NextResponse.json({
       success: false,
       error: {
-        code: 'INTERNAL_SERVER_ERROR',
+        code: 'INTERNAL_SERVER_ERROR For GET',
         message: '잠시 후 다시 시도해주세요.',
       },
     });
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: false,
       error: {
-        code: 'INTERNAL_SERVER_ERROR',
+        code: 'INTERNAL_SERVER_ERROR For Post',
         message: '잠시 후 다시 시도해주세요.',
       },
     });
