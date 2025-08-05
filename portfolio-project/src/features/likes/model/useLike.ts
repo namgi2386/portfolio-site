@@ -28,21 +28,24 @@ export default function useLike() {
 
   const clickThatLike = async () => {
     const newLikedState = !isLiked;
-    setIsLiked(newLikedState);
+    const countChange = newLikedState ? 1 : -1;
 
+    setIsLiked(newLikedState);
+    setHeartCount((prev) => prev + countChange);
     localStorage.setItem('loveActually', newLikedState.toString());
+
     try {
       const action = newLikedState ? 'like' : 'unlike';
       const response = await LikeApi.postLikeOrDislike(action);
-      if (response.success) {
-        fetchHeartCounts();
-      } else {
+      if (!response.success) {
         setIsLiked(!newLikedState);
+        setHeartCount((prev) => prev - countChange);
         localStorage.setItem('loveActually', (!newLikedState).toString());
         console.error('updateHeartCounts Error in response', response.error);
       }
     } catch (error) {
       setIsLiked(!newLikedState);
+      setHeartCount((prev) => prev - countChange);
       localStorage.setItem('loveActually', (!newLikedState).toString());
       console.error('updateHeartCounts Error', error);
     }
