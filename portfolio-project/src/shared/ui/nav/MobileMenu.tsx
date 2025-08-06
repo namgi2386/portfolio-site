@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
 import Link from 'next/link';
-import ThemeToggle from '@/shared/ui/ThemeToggle';
+import ThemeToggle from '@/shared/ui/nav/ThemeToggle';
 
 const ColorStyle = 'cursor-pointer hover:text-no43 transition duration-200 ease-in-out';
 

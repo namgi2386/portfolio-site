@@ -1,6 +1,6 @@
 import LikeButton from '@/features/likes/ui/LikeButton';
-import MobileMenu from '@/shared/ui/MobileMenu';
-import ThemeToggle from '@/shared/ui/ThemeToggle';
+import MobileMenu from '@/shared/ui/nav/MobileMenu';
+import ThemeToggle from '@/shared/ui/nav/ThemeToggle';
 import Link from 'next/link';
 
 const ColorStyle = 'cursor-pointer hover:text-no43 transition duration-200 ease-in-out';

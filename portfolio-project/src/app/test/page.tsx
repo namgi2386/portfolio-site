@@ -1,6 +1,6 @@
 'use client';
 
-import ThemeToggle from '@/shared/ui/ThemeToggle';
+import ThemeToggle from '@/shared/ui/nav/ThemeToggle';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
