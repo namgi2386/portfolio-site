@@ -10,9 +10,12 @@ export default function Topbar() {
   return (
     <div className="fixed top-0 z-50 w-full bg-background shadow-md min-h-16">
       <div className="max-w-6xl mx-auto flex justify-between p-4 font-paperlogy">
-        <Link href="/#main-title-section">
-          <SplitText text="imnammgi's Portfolio" className={`text-2xl font-medium ${ColorStyle}`} />
-        </Link>
+        <div className="relative">
+          <Link href="/#main-title-section">
+            <SplitText text="imnammgi's Portfolio" className={`text-2xl font-medium ${ColorStyle}`} />
+          </Link>
+          <p className={`absolute top-0 left-0 text-2xl font-medium text-no3/10 pointer-events-none`}>imnammgi&apos;s Portfolio</p>
+        </div>
         <div className="hidden md:flex items-center gap-3 text-md space-x-3">
           <Link href="/#profile-section" className={ColorStyle}>
             Profile
