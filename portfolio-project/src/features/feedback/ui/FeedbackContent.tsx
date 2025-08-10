@@ -4,6 +4,7 @@ import { FeedbackContentProps } from '@/entities/feedback/model/types';
 import { useRouter } from 'next/navigation';
 import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
 import { useEffect } from 'react';
+import TempFeedForm from '@/shared/ui/counting-star/TempFeedForm';
 
 export default function FeedbackContent({ isModal = false }: FeedbackContentProps) {
   const router = useRouter();
@@ -43,7 +44,7 @@ export default function FeedbackContent({ isModal = false }: FeedbackContentProp
   return (
     <main className="min-h-screen w-full max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-4xl font-bold font-paperlogy my-6">피드백</h2>
-      <FeedbackForm />
+      <TempFeedForm />
     </main>
   );
 }
