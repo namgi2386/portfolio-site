@@ -29,9 +29,6 @@ export default function Topbar() {
           <Link href="/#final-section" className={ColorStyle}>
             Fin
           </Link>
-          <Link href="/feedback" className={ColorStyle}>
-            ☆★★★★
-          </Link>
           <LikeButton />
           <div className={`flex justify-center ${ColorStyle}`}>
             <ThemeToggle />

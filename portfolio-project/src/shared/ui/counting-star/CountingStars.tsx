@@ -36,7 +36,7 @@ export default function CountingStars({ value, onChange, disabled = false, name 
     }
 
     if (currentValue > 0) {
-      const selectedColors = ['#ef4444', '#e06c2b', '#eab308', '#19c37d', '#ab68ff'];
+      const selectedColors = ['#dc2626', '#ea580c', '#ca8a04', '#16a34a', '#9333ea'];
       return selectedColors[currentValue - 1];
     }
 
