@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
-import Fixedbar from '@/shared/ui/Fixedbar';
+import Fixedbar from '@/shared/ui/nav/Fixedbar';
 
 export const metadata: Metadata = {
   title: '임남기 | Frontend Developer portfolio',
