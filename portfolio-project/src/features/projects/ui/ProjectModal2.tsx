@@ -52,7 +52,7 @@ export default function ProjectModal2() {
 
         {/* 이미지 */}
         <div className="relative min-h-[300px] overflow-hidden">
-          <Image alt="fintech-app-img-1" src="/images/projects/mm01.png" fill className="object-contain" />
+          <Image alt="fintech-app-img-1" src="/images/projects/mm02.png" fill className="object-contain" />
         </div>
       </div>
 
