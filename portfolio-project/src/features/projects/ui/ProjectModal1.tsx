@@ -46,7 +46,7 @@ export default function ProjectModal1() {
 
         {/* 이미지 */}
         <div className="relative min-h-[400px] overflow-hidden">
-          <Image alt="rollmodel-img" src="/images/projects/rollmodel02.png" fill className="object-contain" quality={85} priority />
+          <Image alt="rollmodel-img" src="/images/projects/rollmodel03.png" fill className="object-contain" quality={85} priority />
         </div>
       </div>
 
