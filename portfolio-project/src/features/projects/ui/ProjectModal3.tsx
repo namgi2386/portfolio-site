@@ -45,7 +45,7 @@ export default function ProjectModal3() {
 
         {/* 이미지 */}
         <div className="relative  min-h-[400px] overflow-hidden">
-          <Image alt="webrtc-study-img" src="/images/projects/dreammoa03.png" fill className="object-contain" />
+          <Image alt="webrtc-study-img" src="/images/projects/dreammoa03.png" fill className="object-contain" quality={85} priority />
         </div>
       </div>
 
