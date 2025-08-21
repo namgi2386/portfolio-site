@@ -1,59 +1,10 @@
 'use client';
 
-import { RatingType, initialFeedback, FeedbackData } from '@/entities/feedback/model/types';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import useFeedback from '@/features/feedback/model/useFeedback';
 
 export default function FeedbackForm() {
-  const [feedback, setFeedback] = useState<FeedbackData>(initialFeedback);
-  const [isFeedbackSubmitted, setIsFeedbackSubmitted] = useState<boolean>(false);
-
-  useEffect(() => {
-    const savedData = localStorage.getItem('feedback');
-    const feedbackSubmittedData = localStorage.getItem('feedbackSubmitted');
-    if (savedData) setFeedback(JSON.parse(savedData));
-
-    if (feedbackSubmittedData) {
-      const status = JSON.parse(feedbackSubmittedData);
-      if (status.submitted && Date.now() - status.timestamp > 3600000) {
-        status.submitted = false;
-      }
-      setIsFeedbackSubmitted(status.submitted);
-    }
-  }, []);
-
-  const updateScore = (type: RatingType, num: number) => {
-    const newF = {
-      ...feedback,
-      ratings: {
-        ...feedback.ratings,
-        [type]: num,
-      },
-    };
-    setFeedback(newF);
-    localStorage.setItem('feedback', JSON.stringify(newF));
-  };
-  const updateExtra = (type: keyof FeedbackData, value: string) => {
-    const newF = {
-      ...feedback,
-      [type]: value,
-    };
-    setFeedback(newF);
-    localStorage.setItem('feedback', JSON.stringify(newF));
-  };
-
-  const submitForm = () => {
-    axios.post('/api/feedback', feedback);
-    localStorage.setItem(
-      'feedbackSubmitted',
-      JSON.stringify({
-        submitted: true,
-        timestamp: Date.now(),
-      }),
-    );
-    setIsFeedbackSubmitted(true);
-  };
-
+  const { feedback, isFeedbackSubmitted, submitForm, updateExtra, updateScore } = useFeedback();
+  
   return (
     <>
       <div>

@@ -1,3 +1,23 @@
+export interface FeedbackSuccessResponse {
+  success: true;
+  data: {
+    message: string;
+    feedback_id: number;
+  };
+}
+export interface FeedbackErrorResponse {
+  success: false;
+  error: {
+    code: string;
+    message: string;
+  };
+}
+
+export type FeedbackResponse = FeedbackSuccessResponse | FeedbackErrorResponse;
+
+
+
+
 export interface FeedbackRatings {
   portfolioScore: number;
   technicalScore: number;
