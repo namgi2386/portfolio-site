@@ -10,7 +10,9 @@ export async function GET() {
     }
     return NextResponse.json({
       success: true,
-      count: data.total_count,
+      data: {
+        count: data.total_count,
+      },
     });
   } catch (error) {
     console.error('Error fetching hearts', error);

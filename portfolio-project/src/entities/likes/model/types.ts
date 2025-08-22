@@ -1,6 +1,8 @@
 export interface LikeSuccessResponse {
   success: true;
-  count: number;
+  data: {
+    count: number;
+  };
 }
 
 export interface LikeErrorResponse {

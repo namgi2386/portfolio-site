@@ -1,9 +1,3 @@
-export interface BlogApiResponse<T> {
-  status: 'success' | 'error';
-  data: T;
-  message?: string;
-}
-
 export interface BlogData {
   id: number;
   title: string;
@@ -17,8 +11,24 @@ export interface BlogData {
   prime_tag: string;
 }
 
-export type BlogListResponse = BlogApiResponse<BlogData[]>;
-export type BlogDetailResponse = BlogApiResponse<BlogData>;
+
+export interface BlogSuccessResponse {
+  success: true;
+  data: BlogData[];
+}
+
+export interface BlogErrorResponse {
+  success: false;
+  error: {
+    code: string;
+    message: string;
+  };
+}
+
+
+export type BlogApiResponse = BlogSuccessResponse | BlogErrorResponse;
+
+
 
 export const initialBlog: BlogData = {
   id: 0,

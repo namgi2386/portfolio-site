@@ -10,17 +10,17 @@ export async function GET() {
       throw error;
     }
     return NextResponse.json({
-      status: 'success',
+      success: true,
       data: data,
     });
   } catch (error) {
     console.error('Error fetching blogs:', error);
-    return NextResponse.json(
-      {
-        status: 'error',
+    return NextResponse.json({
+      success: false,
+      error: {
+        code: 'INTERNAL_SERVER_ERROR For GET',
         message: 'Failed to fetch blogs',
       },
-      { status: 500 },
-    );
+    });
   }
 }

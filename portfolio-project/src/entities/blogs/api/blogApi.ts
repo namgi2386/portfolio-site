@@ -1,9 +1,9 @@
-import { BlogListResponse } from '@/entities/blogs/model/types';
+import { BlogApiResponse } from '@/entities/blogs/model/types';
 import axios from 'axios';
 
 export const blogApi = {
-  async getBlogs(): Promise<BlogListResponse> {
-    const response = await axios.get<BlogListResponse>('/api/blog');
+  async getBlogs(): Promise<BlogApiResponse> {
+    const response = await axios.get<BlogApiResponse>('/api/blog');
     return response.data;
   },
 };
