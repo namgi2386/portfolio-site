@@ -1,9 +1,9 @@
-import { FeedbackData, FeedbackResponse } from '@/entities/feedback/model/types';
+import { FeedbackClientApiResponse, FeedbackData } from '@/entities/feedback/model/types';
 import axios from 'axios';
 
 export const FeedbackApi = {
-  async postFeedback(feedback: FeedbackData): Promise<FeedbackResponse> {
-    const response = await axios.post<FeedbackResponse>('/api/feedback', feedback);
+  async postFeedback(feedback: FeedbackData): Promise<FeedbackClientApiResponse> {
+    const response = await axios.post<FeedbackClientApiResponse>('/api/feedback', feedback);
     return response.data;
   },
 };
