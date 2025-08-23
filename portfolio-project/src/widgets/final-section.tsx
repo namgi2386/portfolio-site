@@ -2,7 +2,7 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import { SiVelog } from 'react-icons/si';
 import Link from 'next/link';
-import TempFeedForm from '@/shared/ui/counting-star/TempFeedForm';
+import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
 
 export default function FinalSection() {
   return (
@@ -21,7 +21,7 @@ export default function FinalSection() {
         </div>
 
         {/* form */}
-        <TempFeedForm />
+        <FeedbackForm />
       </div>
       <div className="bg-gradient-to-b from-transparent to-no1">
         <div className="max-w-6xl mx-auto px-4 py-8">
