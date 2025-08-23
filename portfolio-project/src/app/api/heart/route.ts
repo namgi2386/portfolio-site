@@ -1,5 +1,4 @@
-import { LikeGetApiResponse, LikePostApiResponse } from '@/app/api/heart/types';
-import { LikeApiRequest } from '@/entities/likes';
+import { LikeGetApiResponse, LikePostApiResponse, LikeApiRequest } from '@/app/api/heart/types';
 import { createServerClient } from '@/shared/lib/supabase/server';
 import { NextResponse } from 'next/server';
 

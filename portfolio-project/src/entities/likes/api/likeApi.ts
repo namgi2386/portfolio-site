@@ -1,4 +1,4 @@
-import { LikeClientGetApiResponse , LikeClientPostApiResponse } from '@/entities/likes/model/types';
+import { LikeClientApiRequest, LikeClientGetApiResponse , LikeClientPostApiResponse } from '@/entities/likes/model/types';
 import axios from 'axios';
 
 export const LikeApi = {
@@ -6,11 +6,8 @@ export const LikeApi = {
     const response = await axios.get<LikeClientGetApiResponse>('/api/heart');
     return response.data;
   },
-  async postLikeOrDislike(action: 'like' | 'unlike'): Promise<LikeClientPostApiResponse> {
-    const data = {
-      action: action,
-    };
-    const response = await axios.post<LikeClientPostApiResponse>('/api/heart', data);
+  async postLikeOrDislike(request: LikeClientApiRequest): Promise<LikeClientPostApiResponse> {
+    const response = await axios.post<LikeClientPostApiResponse>('/api/heart', request);
     return response.data;
   },
 };

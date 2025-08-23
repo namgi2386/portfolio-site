@@ -6,7 +6,7 @@ interface LikeData {
 
 export type LikeClientGetApiResponse = ApiClientResponse<LikeData>;
 
-export interface LikeApiRequest {
+export interface LikeClientApiRequest {
   action: 'like' | 'unlike';
 }
 
