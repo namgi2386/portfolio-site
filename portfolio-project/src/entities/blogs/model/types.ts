@@ -1,8 +1,4 @@
-export interface BlogApiResponse<T> {
-  status: 'success' | 'error';
-  data: T;
-  message?: string;
-}
+import { ApiClientResponse } from '@/shared/api/types';
 
 export interface BlogData {
   id: number;
@@ -17,8 +13,7 @@ export interface BlogData {
   prime_tag: string;
 }
 
-export type BlogListResponse = BlogApiResponse<BlogData[]>;
-export type BlogDetailResponse = BlogApiResponse<BlogData>;
+export type BlogClientApiResponse = ApiClientResponse<BlogData[]>;
 
 export const initialBlog: BlogData = {
   id: 0,

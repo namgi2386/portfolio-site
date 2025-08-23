@@ -1,10 +1,11 @@
+import { FeedbackApiResponse, FeedbackRequestBody } from '@/app/api/feedback/types';
 import { createServerClient } from '@/shared/lib/supabase/server';
 import { NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<NextResponse<FeedbackApiResponse>> {
   try {
     const supabase = createServerClient();
-    const body = await request.json();
+    const body: FeedbackRequestBody = await request.json();
     if (!body || !body.ratings) {
       return NextResponse.json({
         success: false,
@@ -21,7 +22,7 @@ export async function POST(request: Request) {
         {
           has_rating: !!body.ratings,
           has_comment: !!body.comment_text,
-          has_job_share: !!(body.compony_name || body.job_link),
+          has_job_share: !!(body.company_name || body.job_link),
           has_bug_report: !!body.bug_description,
         },
       ])
@@ -49,7 +50,7 @@ export async function POST(request: Request) {
           feedback_id: feedbackId,
           comment_text: body.comment_text || null,
           bug_description: body.bug_description || null,
-          company_name: body.company_name || null, 
+          company_name: body.company_name || null,
           job_link: body.job_link || null,
         },
       ]);

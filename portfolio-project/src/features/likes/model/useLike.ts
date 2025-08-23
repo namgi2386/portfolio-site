@@ -9,7 +9,7 @@ export default function useLike() {
     try {
       const response = await LikeApi.getLikes();
       if (response.success) {
-        setHeartCount(response.count);
+        setHeartCount(response.data.count);
       } else {
         console.error('fetchHeartCounts Error', response.error);
       }
@@ -36,7 +36,7 @@ export default function useLike() {
 
     try {
       const action = newLikedState ? 'like' : 'unlike';
-      const response = await LikeApi.postLikeOrDislike(action);
+      const response = await LikeApi.postLikeOrDislike({ action: action });
       if (!response.success) {
         setIsLiked(!newLikedState);
         setHeartCount((prev) => prev - countChange);

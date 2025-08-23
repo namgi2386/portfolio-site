@@ -10,11 +10,11 @@ export const useBlogList = () => {
     try {
       setLoading(true);
       const response = await blogApi.getBlogs();
-      if (response.status === 'success') {
-        setBlogs(response.data);
+      if (response.success) {
+        setBlogs(response.data || []);
         setError('');
       } else {
-        setError(response.message || 'blogApi.getBlogs response.status error');
+        setError(response.error?.message || 'blogApi.getBlogs response.status error');
       }
     } catch (error) {
       setError(`Fail blogApi.getBlogs: ${error}`);

@@ -1,18 +1,13 @@
-export interface LikeSuccessResponse {
-  success: true;
+import { ApiClientResponse } from '@/shared/api/types';
+
+interface LikeData {
   count: number;
 }
 
-export interface LikeErrorResponse {
-  success: false;
-  error: {
-    code: string;
-    message: string;
-  };
-}
+export type LikeClientGetApiResponse = ApiClientResponse<LikeData>;
 
-export type LikeApiResponse = LikeSuccessResponse | LikeErrorResponse;
-
-export interface LikeApiRequest {
+export interface LikeClientApiRequest {
   action: 'like' | 'unlike';
 }
+
+export type LikeClientPostApiResponse = ApiClientResponse<{ message: string }>;

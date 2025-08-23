@@ -1,3 +1,5 @@
+import { ApiClientResponse } from '@/shared/api/types';
+
 export interface FeedbackRatings {
   portfolioScore: number;
   technicalScore: number;
@@ -8,13 +10,16 @@ export interface FeedbackData {
   ratings: FeedbackRatings;
   comment_text: string;
   bug_description: string;
-  compony_name: string;
+  company_name: string;
   job_link: string;
 }
 
-export interface FeedbackContentProps {
-  isModal?: boolean;
+export interface FeedbackClientSuccessData {
+  message: string;
+  feedback_id: number;
 }
+export type FeedbackClientApiResponse = ApiClientResponse<FeedbackClientSuccessData>;
+
 
 export type RatingType = 'portfolioScore' | 'technicalScore' | 'designScore';
 
@@ -27,6 +32,6 @@ export const initialFeedback: FeedbackData = {
   },
   comment_text: '',
   bug_description: '',
-  compony_name: '',
+  company_name: '',
   job_link: '',
 };

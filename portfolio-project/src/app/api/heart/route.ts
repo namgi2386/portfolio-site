@@ -1,7 +1,8 @@
+import { LikeGetApiResponse, LikePostApiResponse, LikeApiRequest } from '@/app/api/heart/types';
 import { createServerClient } from '@/shared/lib/supabase/server';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET(): Promise<NextResponse<LikeGetApiResponse>> {
   try {
     const supabase = createServerClient();
     const { data, error } = await supabase.from('heart_stats').select('total_count').single();
@@ -10,10 +11,12 @@ export async function GET() {
     }
     return NextResponse.json({
       success: true,
-      count: data.total_count,
+      data: {
+        count: data.total_count,
+      },
     });
   } catch (error) {
-    console.error('Error fetching hearts', error);
+    console.error('Error get hearts', error);
     return NextResponse.json({
       success: false,
       error: {
@@ -24,10 +27,10 @@ export async function GET() {
   }
 }
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<NextResponse<LikePostApiResponse>> {
   try {
     const supabase = createServerClient();
-    const body = await request.json();
+    const body: LikeApiRequest = await request.json();
     if (!body || !body.action || !['like', 'unlike'].includes(body.action)) {
       return NextResponse.json({
         success: false,
@@ -47,9 +50,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
+      data: {
+        message: '소중한 좋아요 아주 좋아요',
+      },
     });
   } catch (error) {
-    console.error('Error fetching hearts', error);
+    console.error('Error post hearts', error);
     return NextResponse.json({
       success: false,
       error: {
