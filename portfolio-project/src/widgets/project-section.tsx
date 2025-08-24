@@ -29,7 +29,7 @@ export default function ProjectSection() {
               </div>
 
               <div className="space-y-2 hover:text-">
-                <Link href="projects/1">
+                <Link aria-label="노코딩 AI 모델 프로젝트 이동하기" title="노코딩 AI 모델 프로젝트 이동하기" href="projects/1">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground inline-block">노코딩 AI 모델 </h3>
                   <h4 className="text-2xl md:text-3xl font-bold inline-block">
                     <span className="text-custompurple">파이프라인 호스팅</span>
@@ -52,7 +52,7 @@ export default function ProjectSection() {
 
             {/* 오른쪽: 프로젝트 설명 */}
             <div className="lg:col-span-7">
-              <Link href="projects/1">
+              <Link aria-label="노코딩 AI 모델 프로젝트 이동하기" title="노코딩 AI 모델 프로젝트 이동하기" href="projects/1">
                 <SectionBox>
                   <div className="space-y-4 text-no3">
                     <div>팀장, 프론트엔드 ( FE 2인 개발 / 총 6인 )</div>
@@ -77,7 +77,7 @@ export default function ProjectSection() {
               </div>
 
               <div className="space-y-2">
-                <Link href="projects/2">
+                <Link aria-label="사회초년생 맞춤 예산관리 프로젝트 이동하기" title="사회초년생 맞춤 예산관리 프로젝트 이동하기" href="projects/2">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground inline-block">사회초년생 맞춤 예산관리</h3>
                   <h4 className="text-2xl md:text-3xl font-bold inline-block">
                     <span className="text-custompurple">핀테크 앱</span>
@@ -96,7 +96,7 @@ export default function ProjectSection() {
 
             {/* 오른쪽: 프로젝트 설명 */}
             <div className="lg:col-span-7">
-              <Link href="projects/2">
+              <Link aria-label="사회초년생 맞춤 예산관리 프로젝트 이동하기" title="사회초년생 맞춤 예산관리 프로젝트 이동하기" href="projects/2">
                 <SectionBox>
                   <div className="space-y-4 text-no3">
                     <div>프론트엔드, 발표 ( FE 3인 개발 / 총 6인 )</div>
@@ -121,7 +121,7 @@ export default function ProjectSection() {
               </div>
 
               <div className="space-y-2">
-                <Link href="projects/3">
+                <Link aria-label="실시간 화상 스터디 프로젝트 이동하기" title="실시간 화상 스터디 프로젝트 이동하기" href="projects/3">
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground inline-block">WebRTC기반</h3>
                   <h4 className="text-2xl md:text-3xl font-bold inline-block">
                     <span className="text-custompurple">실시간 화상</span>
@@ -139,10 +139,9 @@ export default function ProjectSection() {
                 <Image src="/images/icons/temp/figma.svg" alt="Figma" width={32} height={32} className="rounded" />
               </div>
             </div>
-
             {/* 오른쪽: 프로젝트 설명 */}
             <div className="lg:col-span-7">
-              <Link href="projects/3">
+              <Link aria-label="실시간 화상 스터디 프로젝트 이동하기" title="실시간 화상 스터디 프로젝트 이동하기" href="projects/3">
                 <SectionBox>
                   <div className="space-y-4 text-no3">
                     <div className="">프론트엔드, 발표 ( FE 2인 개발 / 총 6인 )</div>

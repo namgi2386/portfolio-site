@@ -28,6 +28,8 @@ export default function FeedbackForm() {
             </div>
           </div>
           <button
+            aria-label="피드백 제출하기"
+            title="피드백 제출하기"
             className={`w-full text-white p-4 rounded-lg font-bold text-lg transition-all duration-300 ${
               isFeedbackSubmitted ? 'bg-no2 cursor-not-allowed' : 'bg-no43 hover:bg-no42 dark:bg-no4/30 dark:hover:bg-no42/50 cursor-pointer shadow-lg hover:shadow-xl'
             }`}

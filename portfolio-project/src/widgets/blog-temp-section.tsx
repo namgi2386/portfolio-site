@@ -11,6 +11,7 @@ export default function TempBlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-paperlogy tracking-wider">
           {/* 블로그 포스트 1 */}
           <Link
+            aria-label="블로그 포스트1번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
@@ -41,6 +42,7 @@ export default function TempBlogSection() {
           </Link>
           {/* 블로그 포스트 2 */}
           <Link
+            aria-label="블로그 포스트2번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,6 +74,7 @@ export default function TempBlogSection() {
 
           {/* 블로그 포스트 6 */}
           <Link
+            aria-label="블로그 포스트6번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
@@ -100,6 +103,7 @@ export default function TempBlogSection() {
 
           {/* 블로그 포스트 4 */}
           <Link
+            aria-label="블로그 포스트4번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
@@ -131,6 +135,7 @@ export default function TempBlogSection() {
 
           {/* 블로그 포스트 3 */}
           <Link
+            aria-label="블로그 포스트3번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"
@@ -159,8 +164,9 @@ export default function TempBlogSection() {
             </div>
           </Link>
 
-          {/* 블로그 포스트 1 */}
+          {/* 블로그 포스트 5 */}
           <Link
+            aria-label="블로그 포스트5번"
             href="https://velog.io/@happynj2697/posts"
             target="_blank"
             rel="noopener noreferrer"

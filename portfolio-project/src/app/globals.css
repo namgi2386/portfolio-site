@@ -59,11 +59,11 @@
 
 @variant dark (&:where(.dark, .dark *));
 
-/* 기본색상 설정 */
+/* 라이트모드 설정 */
 :root {
   --background: #efefef;
   --foreground: #0f182a;
-  --custompurple: #aa42de;
+  --custompurple: #a333db;
 }
 
 /* 다크모드 설정 */
