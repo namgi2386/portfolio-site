@@ -33,27 +33,24 @@ export default function MobileMenu() {
   return (
     <>
       <div className="flex md:hidden items-center">
-        <button onClick={toggleMenu} className={ColorStyle}>
+        <button aria-label={isMenuOpen ? '메뉴 닫기' : '메뉴 열기'} title={isMenuOpen ? '메뉴 닫기' : '메뉴 열기'} onClick={toggleMenu} className={ColorStyle}>
           {isMenuOpen ? <IoClose size={28} /> : <RxHamburgerMenu size={24} />}
         </button>
       </div>
       {isMenuOpen && (
         <div className="fixed inset-0 -z-10 bg-background md:hidden pt-16">
           <div className="flex flex-col justify-center items-center h-full space-y-8 font-paperlogy">
-            <Link href="/#profile-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
+            <Link aria-label="프로필 섹션으로 이동" href="/#profile-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
               Profile
             </Link>
-            <Link href="/#project-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
+            <Link aria-label="프로젝트 섹션으로 이동" href="/#project-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
               Project
             </Link>
-            <Link href="/#blog-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
+            <Link aria-label="블로그 섹션으로 이동" href="/#blog-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
               Blog
             </Link>
-            <Link href="/#final-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
+            <Link aria-label="파이널 섹션으로 이동" href="/#final-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
               Fin
-            </Link>
-            <Link href="/feedback" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
-              ☆★★★★
             </Link>
             <ThemeToggle />
           </div>

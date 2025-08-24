@@ -30,7 +30,12 @@ export default function FinalSection() {
             {/* 버튼s */}
             <div className="space-y-6">
               <div className="flex gap-4 justify-center items-center">
-                <Link href="mailto:happynj2697@gmail.com" className="group bg-custompurple hover:bg-no43 dark:hover:bg-no42 text-no0 font-bold py-4 px-4 rounded-full duration-300 hover:scale-105">
+                <Link
+                  aria-label="이메일 복사"
+                  title="이메일 복사"
+                  href="mailto:happynj2697@gmail.com"
+                  className="group bg-custompurple hover:bg-no43 dark:hover:bg-no42 text-no0 font-bold py-4 px-4 rounded-full duration-300 hover:scale-105"
+                >
                   <div className="flex items-center justify-center">
                     <MdOutlineEmail className="text-2xl" />
                   </div>
@@ -38,6 +43,8 @@ export default function FinalSection() {
 
                 <div className="flex space-x-4">
                   <Link
+                    aria-label="깃허브 이동하기"
+                    title="깃허브 이동하기"
                     href="https://github.com/namgi2386"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -47,6 +54,8 @@ export default function FinalSection() {
                   </Link>
 
                   <Link
+                    aria-label="블로그 이동하기"
+                    title="블로그 이동하기"
                     href="https://velog.io/@happynj2697/posts"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -66,11 +75,11 @@ export default function FinalSection() {
               {/* 연락처 정보 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
                 <div className="space-y-2 text-center">
-                  <h4 className="text-no3 text-sm uppercase tracking-wider">Email</h4>
+                  <div className="text-no3 text-sm uppercase tracking-wider">Email</div>
                   <p className="text-no0 text-lg">happynj2697@gmail.com</p>
                 </div>
                 <div className="space-y-2 text-center">
-                  <h4 className="text-no3 text-sm uppercase tracking-wider">Phone</h4>
+                  <div className="text-no3 text-sm uppercase tracking-wider">Phone</div>
                   <p className="text-no0 text-lg">010-2386-4855</p>
                 </div>
               </div>

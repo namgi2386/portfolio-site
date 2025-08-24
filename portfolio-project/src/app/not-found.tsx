@@ -8,7 +8,7 @@ export default function NotFound() {
       <GlitchText speed={4} enableShadows={true} enableOnHover={false} className="cursor-target">
         404 Not Found
       </GlitchText>
-      <Link href="/" className="cursor-target bg-no2 text-foreground px-4 py-2 mt-10  rounded-lg hover:bg-no2/50 duration-300 trasition ">
+      <Link aria-label="홈으로 돌아가기" title="홈으로 돌아가기" href="/" className="cursor-target bg-no2 text-foreground px-4 py-2 mt-10 rounded-lg hover:bg-no2/50 duration-300 trasition ">
         Come Back Home Bebe
       </Link>
       <TargetCursor spinDuration={2} hideDefaultCursor={true} />

@@ -45,14 +45,28 @@ export default function ProfileSection() {
                   <div className="flex gap-2">
                     <SiVelog className="text-2xl text-foreground" />
                     <span>Blog</span>
-                    <Link href="https://velog.io/@happynj2697/posts" className="text-custompurple font-semibold cursor-pointer" target="_blank" rel="noopener noreferrer">
+                    <Link
+                      aria-label="블로그 이동하기"
+                      title="블로그 이동하기"
+                      href="https://velog.io/@happynj2697/posts"
+                      className="text-custompurple font-semibold cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       보러가기
                     </Link>
                   </div>
                   <div className="flex gap-2">
                     <FaGithub className="text-2xl text-foreground" />
                     <span>GitHub</span>
-                    <Link href="https://github.com/namgi2386" className="text-custompurple font-semibold cursor-pointer" target="_blank" rel="noopener noreferrer">
+                    <Link
+                      aria-label="깃허브 이동하기"
+                      title="깃허브 이동하기"
+                      href="https://github.com/namgi2386"
+                      className="text-custompurple font-semibold cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       보러가기
                     </Link>
                   </div>
