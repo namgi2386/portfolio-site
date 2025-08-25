@@ -17,7 +17,7 @@ export default function ProjectModal1() {
           {/* 1 */}
           <div>
             <h2 className="font-paperlogy text-xl font-bold text-foreground mb-4">FSD 아키텍처 도입</h2>
-            <p className="text-foreground leading-relaxed">
+            <p className="text-foreground leading-relaxed font-sans">
               이전 레이어드 아키텍처에서 느낀 컴포넌트 의존성 문제의 해결을 위해 <span className="text-custompurple font-semibold">FSD</span> 아키텍처를 도입했습니다. 이를 통해{' '}
               <span className="text-custompurple font-semibold">feature별 효율적 병렬 작업</span>이 가능하도록 했습니다.
             </p>
@@ -26,7 +26,7 @@ export default function ProjectModal1() {
           {/* 2 */}
           <div>
             <h2 className="font-paperlogy text-xl font-bold text-foreground mb-4">하이브리드 렌더링</h2>
-            <p className="text-foreground leading-relaxed">
+            <p className="text-foreground leading-relaxed font-sans">
               Dashboard에서의 <span className="text-custompurple font-semibold">스켈레톤 코드</span>에는 <span className="text-custompurple font-semibold">SSR</span>방식을 적용했으며,{' '}
               <span className="text-custompurple font-semibold">사용자 인터렉티브</span>를 위해서 <span className="text-custompurple font-semibold">CSR</span>방식을 도입했습니다.
               <br />
@@ -37,7 +37,7 @@ export default function ProjectModal1() {
           {/* 3 */}
           <div>
             <h2 className="font-paperlogy text-xl font-bold text-foreground mb-4">HTTPS 포함시 문제해결</h2>
-            <p className="text-foreground leading-relaxed">
+            <p className="text-foreground leading-relaxed font-sans">
               HTTPS 배포 환경에서 <span className="text-custompurple font-semibold">HTTP API 서버 통신 시 Mixed Content</span> 오류 발생을{' '}
               <span className="text-custompurple font-semibold">프록시</span> 설정으로 해결하여 클라이언트 코드 수정 없이 안전적인 API 통신이 가능하도록 구현했습니다.
             </p>
@@ -55,7 +55,7 @@ export default function ProjectModal1() {
         {/* 1 */}
         <div>
           <h2 className="font-paperlogy text-xl font-bold text-foreground mb-4 inline-block bg-no3/30 px-4 py-2 rounded-lg">프론트엔드로서</h2>
-          <p className="text-foreground leading-relaxed">
+          <p className="text-foreground leading-relaxed font-sans">
             이전 프로젝트에서는 <span className="text-custompurple font-semibold">컴포넌트 중심</span>의 사고에 머물렀다면, 이번 프로젝트를 통해 전체 시스템의{' '}
             <span className="text-custompurple font-semibold">확장성과 유지보수성</span>을 고려하는 관점으로 성장했습니다. <span className="text-custompurple font-semibold">렌더링 방식별</span> 특성을
             이해하여 <span className="text-custompurple font-semibold">페이지별 최적화 전략</span>을 수립했고, <span className="text-custompurple font-semibold">캐싱 전략과 상태 관리</span>를 통한
@@ -65,10 +65,10 @@ export default function ProjectModal1() {
         </div>
 
         {/* 2 */}
-        <div>
+        <div className="font-paperlogy">
           <h2 className="font-paperlogy text-xl font-bold text-foreground mb-4 inline-block bg-no3/30 px-4 py-2 rounded-lg">팀장으로서</h2>
-          <p className="text-foreground leading-relaxed">
-            프로젝트의 <span className="text-custompurple font-semibold">복합성성</span>을 관리하기 위해 <span className="text-custompurple font-semibold">MVP</span>를 3단계로 나누어 진행했습니다.
+          <p className="text-foreground leading-relaxed font-sans" >
+            프로젝트의 <span className="text-custompurple font-semibold">복합성</span>을 관리하기 위해 <span className="text-custompurple font-semibold">MVP</span>를 3단계로 나누어 진행했습니다.
             1단계에서는 <span className="text-custompurple font-semibold">최소 기능 구현</span>을 통해 <span className="text-custompurple font-semibold">타원별 실제 개발 속도</span>를 파악했고,
             2단계에서는 <span className="text-custompurple font-semibold">구체적인 기능들을 구현</span>하여 상호 의존성 있는 기능들의{' '}
             <span className="text-custompurple font-semibold">통합 테스트</span>를 진행했습니다. 3단계에서는 예러 처리와 완전한 <span className="text-custompurple font-semibold">기능 통합</span>을
