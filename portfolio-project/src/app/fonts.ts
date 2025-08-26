@@ -29,6 +29,6 @@ export const pretendard = localFont({
   variable: '--font-pretendard',
   display: 'swap',
   // preload: true,
-  weight: '400 600',
-  adjustFontFallback: 'Arial',
+  // weight: '400 600',
+  // adjustFontFallback: 'Arial',
 });
