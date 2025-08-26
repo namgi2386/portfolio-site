@@ -1,4 +1,4 @@
-import { pretendard, paperlogy } from './fonts';
+import { paperlogy } from './fonts';
 import { ThemeProvider } from 'next-themes';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children, modal }: { children: React.ReactNode; modal: React.ReactNode }) {
   return (
-    <html lang="ko" suppressHydrationWarning className={`${paperlogy.variable} ${pretendard.variable}`}>
+    <html lang="ko" suppressHydrationWarning className={`${paperlogy.variable}`}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Fixedbar />
