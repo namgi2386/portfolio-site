@@ -9,7 +9,7 @@ const ColorStyle = 'cursor-pointer hover:text-no43 transition duration-200 ease-
 export default function Topbar() {
   return (
     <div className="fixed top-0 z-50 w-full bg-background shadow-md min-h-16">
-      <div className="max-w-6xl mx-auto flex justify-between p-4 font-paperlogy">
+      <div className="max-w-6xl mx-auto flex justify-between p-4">
         <div className="relative">
           <Link aria-label="메인 섹션으로 이동" href="/#main-title-section">
             <SplitText text="imnammgi's Portfolio" className={`text-2xl font-medium ${ColorStyle}`} />

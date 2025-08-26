@@ -39,7 +39,7 @@ export default function MobileMenu() {
       </div>
       {isMenuOpen && (
         <div className="fixed inset-0 -z-10 bg-background md:hidden pt-16">
-          <div className="flex flex-col justify-center items-center h-full space-y-8 font-paperlogy">
+          <div className="flex flex-col justify-center items-center h-full space-y-8 ">
             <Link aria-label="프로필 섹션으로 이동" href="/#profile-section" className={`text-3xl font-medium ${ColorStyle}`} onClick={closeMenu}>
               Profile
             </Link>

@@ -23,8 +23,8 @@ export default function ProfileSection() {
             <div className="col-span-1 lg:col-span-1 space-y-4 lg:space-y-6 flex flex-col justify-between">
               {/* 이름과 직업 */}
               <div className="space-y-2">
-                <h2 className="font-paperlogy text-xl md:text-2xl lg:text-3xl font-bold text-foreground">프론트엔드 개발자</h2>
-                <h3 className="font-paperlogy text-2xl md:text-3xl lg:text-4xl font-bold text-custompurple">임남기</h3>
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">프론트엔드 개발자</h2>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-custompurple">임남기</h3>
               </div>
 
               {/* 연락처 정보 */}
@@ -112,7 +112,7 @@ export default function ProfileSection() {
           </SectionBox>
 
           <div className="space-y-6 ">
-            <h2 className="font-paperlogy text-3xl md:text-4xl font-bold text-foreground">Skill & Tools</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Skill & Tools</h2>
 
             {/* 기술스택 그리드 */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

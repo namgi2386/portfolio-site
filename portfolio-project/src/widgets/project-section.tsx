@@ -16,7 +16,7 @@ export default function ProjectSection() {
   return (
     <div className="w-full px-4 py-12">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-paperlogy text-4xl md:text-5xl font-bold text-foreground mb-12">Project !</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12">Project !</h2>
 
         <div className="space-y-8">
           {/* 프로젝트 1: 노코딩 AI 모델 파이프라인 호스팅 플랫폼 */}

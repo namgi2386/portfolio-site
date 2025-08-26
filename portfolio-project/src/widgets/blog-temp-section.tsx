@@ -6,9 +6,9 @@ export default function TempBlogSection() {
   return (
     <div className="w-full px-4 py-12 ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-paperlogy text-4xl md:text-5xl font-bold text-foreground mb-12">Blog (offline)</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12">Blog (offline)</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-paperlogy tracking-wider">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 tracking-wider">
           {/* 블로그 포스트 1 */}
           <Link
             aria-label="블로그 포스트1번"
