@@ -6,12 +6,12 @@ import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
 
 export default function FinalSection() {
   return (
-    <div className="w-full  font-paperlogy">
+    <div className="w-full">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* 메인 타이틀 */}
         <div className="space-y-8 mb-32 text-center">
           <div className="space-y-4">
-            <h2 className="font-paperlogy text-5xl md:text-6xl lg:text-7xl font-bold">
+            <h2 className=" text-5xl md:text-6xl lg:text-7xl font-bold">
               <span className="text-foreground">Here&apos;s</span>
               <br />
               <span className="text-custompurple">Imnamm&apos;m&apos;m</span>
