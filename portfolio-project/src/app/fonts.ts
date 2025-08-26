@@ -24,11 +24,11 @@ export const paperlogy = localFont({
   adjustFontFallback: 'Arial',
 });
 
-export const pretendard = localFont({
-  src: './fonts/pretendardVariable.woff2',
-  variable: '--font-pretendard',
-  display: 'swap',
-  // preload: true,
-  // weight: '400 600',
-  // adjustFontFallback: 'Arial',
-});
+// export const pretendard = localFont({
+//   src: './fonts/pretendardVariable.woff2',
+//   variable: '--font-pretendard',
+//   display: 'swap',
+// preload: true,
+// weight: '400 600',
+// adjustFontFallback: 'Arial',
+// });

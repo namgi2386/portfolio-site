@@ -45,8 +45,8 @@
   --color-green-02: #ade4af;
   --color-green-velog: #20c393;
 
-  --font-primary: var(--font-paperlogy), var(--font-pretendard), sans-serif;
-  --font-secondary: var(--font-pretendard), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-primary: var(--font-paperlogy), sans-serif;
+  /* --font-secondary: var(--font-pretendard), -apple-system, BlinkMacSystemFont, sans-serif; */
 }
 
 body {
@@ -87,9 +87,9 @@ html {
   font-family: var(--font-primary);
 }
 
-@utility font-secondary {
+/* @utility font-secondary {
   font-family: var(--font-secondary);
-}
+} */
 
 /* globals.css에 추가 */
 @utility shadow-custom {
