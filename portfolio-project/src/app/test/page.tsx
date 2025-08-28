@@ -15,6 +15,10 @@ export default function TestPage() {
         <div>
           <ThemeToggle />
         </div>
+        <div>
+          <p>Jest와 React Testing Library 환경 테스트</p>
+          <button type="button">클릭 테스트 버튼</button>
+        </div>
       </div>
     </div>
   );
