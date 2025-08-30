@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { SectionBoxStack } from './SectionBox';
 
 describe('SectionBoxStack 컴포넌트', () => {

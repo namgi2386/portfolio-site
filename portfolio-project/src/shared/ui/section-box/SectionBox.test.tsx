@@ -1,6 +1,5 @@
 import SectionBox from '@/shared/ui/section-box/SectionBox';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
 
 describe('SectionBox 테스트', () => {
   test('children 렌더링 테스트', () => {
@@ -19,7 +18,7 @@ describe('SectionBox 테스트', () => {
 
     // 텍스트 내용으로 찾기 (button태그일때 "잘가no.2" 텍스트인 요소 찾아옴)
     // '잘가no.1'을 찾을때는 aria-label이 달려있고, aria-label가 우선시되기에 text로 찾을 수 없음.
-    // 때문에 aria-label이 없는 "잘가no.2" 요소는 getByRole로 찾을 수 있다. 
+    // 때문에 aria-label이 없는 "잘가no.2" 요소는 getByRole로 찾을 수 있다.
     const dom2 = screen.getByRole('button', { name: '잘가no.2' });
     expect(dom2).toBeInTheDocument();
 

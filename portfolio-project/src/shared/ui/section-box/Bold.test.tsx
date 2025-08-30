@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { Bold } from '@/shared/ui/section-box/SectionBox';
 
