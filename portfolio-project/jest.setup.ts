@@ -17,13 +17,3 @@ Object.defineProperty(window, 'matchMedia', {
 
 // window.scrollTo 모킹 (ScrollButton에서 필요)
 window.scrollTo = jest.fn();
-
-const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
-};
-Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
-});

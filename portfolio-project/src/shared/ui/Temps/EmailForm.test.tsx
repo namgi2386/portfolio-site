@@ -43,8 +43,10 @@ describe('EmailForm테스트', () => {
     expect(emailInput).toBeDisabled();
 
     // localStorage.setItem 확인
-    expect(localStorage.setItem).toHaveBeenCalledWith('emailSubmitted', expect.stringContaining('"submitted":true'));
-    expect(localStorage.setItem).toHaveBeenCalledWith('emailSubmitted', expect.stringContaining('"timestamp"'));
+    const storedValue = localStorage.getItem('emailSubmitted');
+    const parsedValue = JSON.parse(storedValue!);
+    expect(parsedValue.submitted).toBe(true);
+    expect(typeof parsedValue.timestamp).toBe('number');
 
     // 제출 후에도 name 입력 가능
     await user.type(nameInput, '제출후추가입력');
@@ -53,4 +55,3 @@ describe('EmailForm테스트', () => {
     expect(emailInput).toBeDisabled();
   });
 });
-
