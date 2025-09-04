@@ -1,4 +1,4 @@
-import SectionBox from '@/shared/ui/SectionBox';
+import SectionBox from '@/shared/ui/section-box/SectionBox';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';

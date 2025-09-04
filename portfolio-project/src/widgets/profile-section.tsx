@@ -1,4 +1,4 @@
-import SectionBox, { Bold, SectionBoxSmall, SectionBoxStack } from '@/shared/ui/SectionBox';
+import SectionBox, { Bold, SectionBoxSmall, SectionBoxStack } from '@/shared/ui/section-box/SectionBox';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
