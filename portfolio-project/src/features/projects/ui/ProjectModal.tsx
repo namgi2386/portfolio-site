@@ -3,6 +3,7 @@
 import ProjectModal1 from '@/features/projects/ui/ProjectModal1';
 import ProjectModal2 from '@/features/projects/ui/ProjectModal2';
 import ProjectModal3 from '@/features/projects/ui/ProjectModal3';
+import ProjectModal4 from '@/features/projects/ui/ProjectModal4';
 import { useRouter, redirect } from 'next/navigation';
 import { useEffect } from 'react';
 import { IoClose, IoChevronBack, IoChevronForward } from 'react-icons/io5';
@@ -15,6 +16,7 @@ const modalComponents = {
   '1': ProjectModal1,
   '2': ProjectModal2,
   '3': ProjectModal3,
+  '4': ProjectModal4,
 } as const;
 
 type ModalId = keyof typeof modalComponents;
@@ -69,7 +71,7 @@ export default function ProjectModal({ id }: ProjectModalProps) {
       </button>
 
       {/* 모달 콘텐츠 */}
-      <div className="relative w-full max-w-6xl mx-16 bg-textured p-8 rounded-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="relative w-full max-w-6xl mx-16 bg-textured p-8 rounded-2xl max-h-[90vh] overflow-y-auto " onClick={(e) => e.stopPropagation()}>
         <button aria-label="닫기" title="닫기" onClick={() => router.back()} className="absolute right-10 top-10 z-20 cursor-pointer hover:text-no43 transition duration-200 ease-in-out">
           <IoClose size={24} />
         </button>
