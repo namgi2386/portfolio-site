@@ -3,7 +3,7 @@ import { SectionBoxStack } from './SectionBox';
 
 describe('SectionBoxStack 컴포넌트', () => {
   const defaultProps = {
-    imgsrc1: '/images/icons/temp/jest.svg',
+    icon1: 'jest' as const,
     name1: '첫번째 기술 : Jest',
     type: 'normal' as const,
     children: <p>테스트 내용</p>,
@@ -11,7 +11,7 @@ describe('SectionBoxStack 컴포넌트', () => {
 
   test('필수 요소들이 렌더링되어야 한다', () => {
     render(<SectionBoxStack {...defaultProps} />);
-    expect(screen.getByAltText('첫번째 기술 : Jest')).toBeInTheDocument(); // 이미지가 있는지 확인 (alt 속성으로)
+    expect(screen.getByAltText('Jest')).toBeInTheDocument(); // 이미지가 있는지 확인 (alt 속성으로)
     expect(screen.getByText('첫번째 기술 : Jest')).toBeInTheDocument(); // 기술명이 있는지 확인
     expect(screen.getByText('테스트 내용')).toBeInTheDocument(); // children 내용이 있는지 확인
   });
@@ -30,15 +30,15 @@ describe('SectionBoxStack 컴포넌트', () => {
   });
 
   test('두 번째 이미지와 이름이 있을 때 렌더링되어야 한다', () => {
-    render(<SectionBoxStack {...defaultProps} imgsrc2="/images/icons/temp2/testing-library-seeklogo.svg" name2="두번째 기술 : RTL" />);
+    render(<SectionBoxStack {...defaultProps} icon2="rtl" name2="두번째 기술 : RTL" />);
 
-    expect(screen.getByAltText('두번째 기술 : RTL')).toBeInTheDocument();
+    expect(screen.getByAltText('React Testing Library')).toBeInTheDocument();
     expect(screen.getByText('두번째 기술 : RTL')).toBeInTheDocument();
   });
 
   test('두 번째 이미지가 없을 때는 렌더링되지 않아야 한다', () => {
     render(<SectionBoxStack {...defaultProps} />);
 
-    expect(screen.queryByAltText('두번째 기술 : RTL')).not.toBeInTheDocument(); // 없는 요소 테스트
+    expect(screen.queryByAltText('React Testing Library')).not.toBeInTheDocument(); // 없는 요소 테스트
   });
 });
