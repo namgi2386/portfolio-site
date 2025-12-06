@@ -27,7 +27,7 @@ export default function ProfileSWGrid() {
       {/* 더보기 버튼 */}
       {!showAll && SWSKILLS.length > INITIAL_DISPLAY_COUNT && (
         <div className="absolute left-1/2 -translate-x-1/2 -bottom-15">
-          <button onClick={() => setShowAll(true)} className="px-6 py-3 bg-custompurple text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 shadow-md hover:shadow-lg">
+          <button onClick={() => setShowAll(true)} className="px-6 py-3  cursor-pointer text-no3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-200 shadow-md hover:shadow-lg">
             더보기 ({SWSKILLS.length - INITIAL_DISPLAY_COUNT}개 더 보기)
           </button>
         </div>
