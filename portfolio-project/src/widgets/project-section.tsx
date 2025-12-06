@@ -1,5 +1,5 @@
 import SectionBox from '@/shared/ui/section-box/SectionBox';
-import Image from 'next/image';
+import { TechIcon } from '@/shared/ui/tech-icon';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
@@ -40,13 +40,13 @@ export default function ProjectSection() {
 
               {/* 기술스택 아이콘 */}
               <div className="flex space-x-3">
-                <Image src="/images/icons/temp2/NextJS-Dark.svg" alt="Next.js" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/typescript-blue.svg" alt="TypeScript" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/reactquery.svg" alt="TanStack Query" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/jotai.svg" alt="Jotai" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/jest.svg" alt="Jest" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/tailwind.svg" alt="Tailwind CSS" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/figma.svg" alt="Figma" width={32} height={32} className="rounded" />
+                <TechIcon name="nextjs" />
+                <TechIcon name="typescript" />
+                <TechIcon name="reactquery" />
+                <TechIcon name="jotai" />
+                <TechIcon name="jest" />
+                <TechIcon name="tailwind" />
+                <TechIcon name="figma" />
               </div>
             </div>
 
@@ -88,9 +88,9 @@ export default function ProjectSection() {
 
               {/* 기술스택 아이콘 */}
               <div className="flex space-x-3">
-                <Image src="/images/icons/temp/flutter.svg" alt="Flutter" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/dart.svg" alt="Dart" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/firebase.svg" alt="Firebase" width={32} height={32} className="rounded" />
+                <TechIcon name="flutter" />
+                <TechIcon name="dart" />
+                <TechIcon name="firebase" />
               </div>
             </div>
 
@@ -132,11 +132,11 @@ export default function ProjectSection() {
 
               {/* 기술스택 아이콘 */}
               <div className="flex space-x-3">
-                <Image src="/images/icons/temp2/React-Dark.svg" alt="React" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/js.svg" alt="JavaScript" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/recoil.svg" alt="Recoil" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/tailwind.svg" alt="Tailwind CSS" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/figma.svg" alt="Figma" width={32} height={32} className="rounded" />
+                <TechIcon name="react" />
+                <TechIcon name="javascript" />
+                <TechIcon name="recoil" />
+                <TechIcon name="tailwind" />
+                <TechIcon name="figma" />
               </div>
             </div>
             {/* 오른쪽: 프로젝트 설명 */}
@@ -177,13 +177,13 @@ export default function ProjectSection() {
 
               {/* 기술스택 아이콘 */}
               <div className="flex space-x-3">
-                <Image src="/images/icons/temp2/NextJS-Dark.svg" alt="Next.js" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/typescript-blue.svg" alt="TypeScript" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/tailwind.svg" alt="Tailwind CSS" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/supabase-logo/supabase.svg" alt="Supabase" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp2/vercel.svg" alt="Vercel" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/jest.svg" alt="Jest" width={32} height={32} className="rounded" />
-                <Image src="/images/icons/temp/figma.svg" alt="Figma" width={32} height={32} className="rounded" />
+                <TechIcon name="nextjs" />
+                <TechIcon name="typescript" />
+                <TechIcon name="tailwind" />
+                <TechIcon name="supabase" />
+                <TechIcon name="vercel" />
+                <TechIcon name="jest" />
+                <TechIcon name="figma" />
               </div>
             </div>
             {/* 오른쪽: 프로젝트 설명 */}

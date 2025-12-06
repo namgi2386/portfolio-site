@@ -1,5 +1,5 @@
 import MainTitleSection from '@/widgets/main-title-section';
-import ProfileSection from '@/widgets/profile-section';
+import ProfileSection from '@/widgets/profile-section/profile-section';
 import ProjectSection from '@/widgets/project-section';
 import BlogSection from '@/widgets/blog-section';
 import FinalSection from '@/widgets/final-section';
