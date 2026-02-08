@@ -2,6 +2,14 @@ import SectionBox from '@/shared/ui/section-box/SectionBox';
 import { TechIcon } from '@/shared/ui/tech-icon';
 import Link from 'next/link';
 import { ReactNode } from 'react';
+import ReactDOM from 'react-dom';
+
+// 프로젝트 모달 이미지 preload
+ReactDOM.preload('/images/projects/chuchutree01.webp', { as: 'image' });
+ReactDOM.preload('/images/projects/rollmodel03.webp', { as: 'image' });
+ReactDOM.preload('/images/projects/mm02.webp', { as: 'image' });
+ReactDOM.preload('/images/projects/dreammoa03.webp', { as: 'image' });
+ReactDOM.preload('/images/projects/portfolio-main.webp', { as: 'image' });
 
 interface ProjectBoxProps {
   children: ReactNode;
@@ -50,7 +58,7 @@ export default function ProjectSection() {
             </div>
             {/* 오른쪽: 프로젝트 설명 */}
             <div className="lg:col-span-7">
-              <Link aria-label="알고리즘 학습 프로젝트 이동하기" title="알고리즘 학습 프로젝트 이동하기" href="projects/4">
+              <Link aria-label="알고리즘 학습 프로젝트 이동하기" title="알고리즘 학습 프로젝트 이동하기" href="projects/5">
                 <SectionBox>
                   <div className="space-y-4 text-no3">
                     <div>팀장/기획/프론트엔드 ( 2인 개발 )</div>
