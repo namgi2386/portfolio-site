@@ -18,7 +18,9 @@ export default function ProfileSWGrid() {
       {/* 기술스택 그리드 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {displayedSkills.map((skill, index) => (
-          <SectionBoxStack key={index} icon1={skill.icon1} icon2={skill.icon2} name1={skill.name1} name2={skill.name2} type={skill.type}>
+          <SectionBoxStack key={index} icon1={skill.icon1} icon2={skill.icon2} name1={skill.name1} name2={skill.name2}
+          icon3={skill.icon3} name3={skill.name3}
+          type={skill.type}>
             <p>{skill.description}</p>
           </SectionBoxStack>
         ))}

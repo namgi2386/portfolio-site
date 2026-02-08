@@ -2,13 +2,12 @@ import { MdOutlineEmail } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import { SiVelog } from 'react-icons/si';
 import Link from 'next/link';
-import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
+// import FeedbackForm from '@/features/feedback/ui/FeedbackForm';
 
 export default function FinalSection() {
   return (
     <div className="w-full">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* 메인 타이틀 */}
+      {/* <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="space-y-8 mb-32 text-center">
           <div className="space-y-4">
             <h2 className=" text-5xl md:text-6xl lg:text-7xl font-bold">
@@ -19,11 +18,9 @@ export default function FinalSection() {
             <div className="w-24 h-1 bg-custompurple mx-auto rounded-full"></div>
           </div>
         </div>
-
-        {/* form */}
         <FeedbackForm />
-      </div>
-      <div className="bg-gradient-to-b from-transparent to-no1">
+      </div> */}
+      <div className="bg-linear-to-b from-transparent to-no1">
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* final */}
           <div className=" pt-30 text-center ">

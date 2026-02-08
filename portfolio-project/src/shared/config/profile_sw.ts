@@ -3,8 +3,10 @@ import { TechIconName } from '@/shared/config/icons';
 interface SkillItem {
   icon1: TechIconName;
   icon2?: TechIconName;
+  icon3?: TechIconName;
   name1: string;
   name2?: string;
+  name3?: string;
   type: 'prime' | 'normal';
   description: string;
 }
@@ -41,10 +43,12 @@ export const SWSKILLS: SkillItem[] = [
     description: '서버 상태 관리 및 캐싱을 통한 효율적인 데이터 페칭 구현 가능',
   },
   {
-    icon1: 'jotai',
-    icon2: 'recoil',
-    name1: 'Jotai',
-    name2: 'Recoil',
+    icon1: 'zustand',
+    icon2: 'jotai',
+    icon3: 'recoil',
+    name1: 'Zustand',
+    name2: 'Jotai',
+    name3: 'Recoil',
     type: 'normal',
     description: '프로젝트 규모와 요구사항에 따라 적합한 상태 관리 라이브러리를 선택하여 보일러플레이트 최소화 및 성능 최적화 가능',
   },
