@@ -4,6 +4,7 @@ import ProjectModal1 from '@/features/projects/ui/ProjectModal1';
 import ProjectModal2 from '@/features/projects/ui/ProjectModal2';
 import ProjectModal3 from '@/features/projects/ui/ProjectModal3';
 import ProjectModal4 from '@/features/projects/ui/ProjectModal4';
+import ProjectModal5 from '@/features/projects/ui/ProjectModal5';
 import { useRouter, redirect } from 'next/navigation';
 import { useEffect } from 'react';
 import { IoClose, IoChevronBack, IoChevronForward } from 'react-icons/io5';
@@ -17,6 +18,7 @@ const modalComponents = {
   '2': ProjectModal2,
   '3': ProjectModal3,
   '4': ProjectModal4,
+  '5': ProjectModal5,
 } as const;
 
 type ModalId = keyof typeof modalComponents;

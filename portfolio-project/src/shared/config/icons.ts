@@ -16,6 +16,7 @@ export const TECH_ICONS = {
   // State Management
   jotai: '/images/icons/temp2/jotai.svg',
   recoil: '/images/icons/temp2/recoil.svg',
+  zustand: '/images/icons/temp2/zustand.svg',
   tanstack: '/images/icons/temp/tanstack.svg',
   reactquery: '/images/icons/temp2/reactquery.svg',
 
@@ -57,6 +58,7 @@ export const TECH_ICON_LABELS: Record<TechIconName, string> = {
   dart: 'Dart',
   jotai: 'Jotai',
   recoil: 'Recoil',
+  zustand: 'Zustand',
   tanstack: 'TanStack Query',
   reactquery: 'React Query',
   django: 'Django',
