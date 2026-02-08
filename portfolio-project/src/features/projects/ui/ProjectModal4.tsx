@@ -46,7 +46,7 @@ export default function ProjectModal4() {
 
         {/* 이미지 */}
         <div className="relative min-h-[400px] overflow-hidden">
-          <Image alt="portfolio-img" src="/images/projects/portfolio-main.png" fill className="object-contain" quality={85} priority />
+          <Image alt="portfolio-img" src="/images/projects/portfolio-main.webp" fill className="object-contain" quality={85} priority />
         </div>
       </div>
 
